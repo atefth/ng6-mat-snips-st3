@@ -1,103 +1,71 @@
 <snippet>
   <content><![CDATA[
-  "Angular Directive": {
-    "prefix": "ng-directive",
-    "description": "Generic Directive",
-    "types": "typescript",
-    "body": [
-      "import { Directive } from '@angular/core';",
-      "",
-      "@Directive({",
-      "\tselector: '${1:selector}',",
-      "})",
-      "export class ${2:Name}Directive {${3: }}$0"
-    ]
-  }
+    import { Directive } from '@angular/core';
+    
+    @Directive({
+      selector: '${1:selector}',
+    })
+    export class ${2:Name}Directive {${3: }}
+    $0
   ]]></content >
-	<tabTrigger>ngd</tabTrigger>
-	<scope>*.ts</scope>
-	<description>NgDirective</description>
+	<tabTrigger>ngDirective</tabTrigger>
 </snippet >
 <snippet>
   <content><![CDATA[
-  "Angular CSS Directive": {
-    "prefix": "ng-directive-css",
-    "description": "CSS directive",
-    "types": "typescript",
-    "body": [
-      "import { Directive, ElementRef, Input } from '@angular/core';",
-      "",
-      "@Directive({",
-      "\tselector: '[${1:selector}]',",
-      "})",
-      "export class ${2:Name}Directive {",
-      "\tconstructor(private elementRef: ElementRef) {}",
-      "",
-      "\tprivate ${3:name}(${4:value}: string) {",
-      "\t\tthis.elementRef.nativeElement.style.${5:proptery} = ${6:value};",
-      "\t}",
-      "}$0"
-    ]
-  }
+    import { Directive, ElementRef, Input } from '@angular/core';
+    
+    @Directive({
+      selector: '[${1:selector}]',
+    })
+    export class ${2:Name}Directive {
+      constructor(private elementRef: ElementRef) {}
+    
+      private ${3:name}(${4:value}: string) {
+        this.elementRef.nativeElement.style.${5:proptery} = ${6:value};
+      }
+    }
+    $0
   ]]></content >
-	<tabTrigger>ngdc</tabTrigger>
-	<scope>*.ts</scope>
-	<description>NgDirective for CSS</description>
+	<tabTrigger>ngDirectiveCss</tabTrigger>
 </snippet >
 <snippet>
   <content><![CDATA[
-  "Angular Attribute Directive": {
-    "prefix": "ng-directive-attribute",
-    "description": "Attribute directive",
-    "types": "typescript",
-    "body": [
-      "import { Directive } from '@angular/core';",
-      "",
-      "@Directive({",
-      "\tselector: '[${1:app}${2:Name}]',",
-      "})",
-      "export class ${2:Name}Directive {${4: }}$0"
-    ]
-  }
+    import { Directive } from '@angular/core';
+    
+    @Directive({
+      selector: '[${1:app}${2:Name}]',
+    })
+    export class ${2:Name}Directive {${4: }}
+    $0
   ]]></content >
-	<tabTrigger>ngc</tabTrigger>
-	<scope>*.ts</scope>
-	<description>NgDirective for attributes</description>
+	<tabTrigger>ngDirectiveAttribute</tabTrigger>
 </snippet >
 <snippet>
   <content><![CDATA[
-  "Angular Validator": {
-    "prefix": "ng-validator",
-    "description": "validation directive",
-    "types": "typescript",
-    "body": [
-      "import { Directive } from '@angular/core';",
-      "import { Validator, NG_VALIDATORS, FormControl } from '@angular/forms';",
-      "",
-      "@Directive({",
-      "\tselector: '[${validatorName}][ngModel]',",
-      "\tproviders: [",
-      "\t\t{ provide: NG_VALIDATORS, useExisting: ${className}, multi: true }",
-      "\t]",
-      "})",
-      "",
-      "export class ${className} implements Validator {",
-      "\tvalidate(c: FormControl): { [key: string]: any } {",
-      "\t\tif (valid) {",
-      "\t\t\treturn null;",
-      "\t\t}",
-      "",
-      "\t\treturn {",
-      "\t\t\t${validatorName}: {",
-      "\t\t\t\tvalid: false",
-      "\t\t\t}",
-      "\t\t};",
-      "\t}",
-      "}"
-    ]
-  }
+    import { Directive } from '@angular/core';
+    import { Validator, NG_VALIDATORS, FormControl } from '@angular/forms';
+    
+    @Directive({
+      selector: '[${validatorName}][ngModel]',
+      providers: [
+        { provide: NG_VALIDATORS, useExisting: ${className}, multi: true }
+      ]
+    })
+    
+    export class ${className} implements Validator {
+      validate(c: FormControl): { [key: string]: any } {
+        if (valid) {
+          return null;
+        }
+    
+        return {
+          ${validatorName}: {
+            valid: false
+          }
+        };
+      }
+    }
+    $0
   ]]></content >
-	<tabTrigger>ngdv</tabTrigger>
-	<scope>*.ts</scope>
-	<description>NgDirective for validation</description>
+	<tabTrigger>ngDirectiveValiadtor</tabTrigger>
 </snippet >

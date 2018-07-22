@@ -1,952 +1,547 @@
 <snippet>
   <content><![CDATA[
-  "Angular Material Module": {
-    "": "ng-material-module",
-    "description": "Material Module",
-    "types": "typescript",
-    "body": [  
-      "import {NgModule} from '@angular/core';",
-      "import {",
-      "\tMatAutocompleteModule,",
-      "\tMatButtonModule,",
-      "\tMatButtonToggleModule,",
-      "\tMatCardModule,",
-      "\tMatCheckboxModule,",
-      "\tMatDatepickerModule,",
-      "\tMatDialogModule,",
-      "\tMatExpansionModule,",
-      "\tMatFormFieldModule,",
-      "\tMatGridListModule,",
-      "\tMatChipsModule,",
-      "\tMatIconModule,",
-      "\tMatInputModule,",
-      "\tMatListModule,",
-      "\tMatMenuModule,",
-      "\tMatPaginatorModule,",
-      "\tMatProgressBarModule,",
-      "\tMatProgressSpinnerModule,",
-      "\tMatRadioModule,",
-      "\tMatSelectModule,",
-      "\tMatSidenavModule,",
-      "\tMatSliderModule,",
-      "\tMatSlideToggleModule,",
-      "\tMatSnackBarModule,",
-      "\tMatSortModule,",
-      "\tMatTableModule,",
-      "\tMatTabsModule,",
-      "\tMatToolbarModule,",
-      "\tMatTooltipModule,",
-      "\tMatStepperModule,",
-      "} from '@angular/material';",
-      "import {MatNativeDateModule, MatRippleModule} from '@angular/material';",
-      "import {CdkTableModule} from '@angular/cdk/table';",
-      "import {CdkAccordionModule} from '@angular/cdk/accordion';",
-      "import {A11yModule} from '@angular/cdk/a11y';",
-      "import {BidiModule} from '@angular/cdk/bidi';",
-      "import {OverlayModule} from '@angular/cdk/overlay';",
-      "import {PlatformModule} from '@angular/cdk/platform';",
-      "import {ObserversModule} from '@angular/cdk/observers';",
-      "import {PortalModule} from '@angular/cdk/portal';",
-      "",
-      "/**",
-      " * NgModule that includes all Material modules.",
-      "*/",
-      "@NgModule({",
-      "/texports: [",
-      "\t\tMatAutocompleteModule,",
-      "\t\tMatButtonModule,",
-      "\t\tMatButtonToggleModule,",
-      "\t\tMatCardModule,",
-      "\t\tMatCheckboxModule,",
-      "\t\tMatChipsModule,",
-      "\t\tMatTableModule,",
-      "\t\tMatDatepickerModule,",
-      "\t\tMatDialogModule,",
-      "\t\tMatExpansionModule,",
-      "\t\tMatFormFieldModule,",
-      "\t\tMatGridListModule,",
-      "\t\tMatIconModule,",
-      "\t\tMatInputModule,",
-      "\t\tMatListModule,",
-      "\t\tMatMenuModule,",
-      "\t\tMatPaginatorModule,",
-      "\t\tMatProgressBarModule,",
-      "\t\tMatProgressSpinnerModule,",
-      "\t\tMatRadioModule,",
-      "\t\tMatRippleModule,",
-      "\t\tMatSelectModule,",
-      "\t\tMatSidenavModule,",
-      "\t\tMatSlideToggleModule,",
-      "\t\tMatSliderModule,",
-      "\t\tMatSnackBarModule,",
-      "\t\tMatSortModule,",
-      "\t\tMatStepperModule,",
-      "\t\tMatTabsModule,",
-      "\t\tMatToolbarModule,",
-      "\t\tMatTooltipModule,",
-      "\t\tMatNativeDateModule,",
-      "\t\tCdkTableModule,",
-      "\t\tA11yModule,",
-      "\t\tBidiModule,",
-      "\t\tCdkAccordionModule,",
-      "\t\tObserversModule,",
-      "\t\tOverlayModule,",
-      "\t\tPlatformModule,",
-      "\t\tPortalModule,",
-      "\t]",
-      "})",
-      "export class ${Name}MaterialModule {}"
-    ]
-  }
+    import {NgModule} from '@angular/core';
+    import {
+      MatAutocompleteModule,
+      MatButtonModule,
+      MatButtonToggleModule,
+      MatCardModule,
+      MatCheckboxModule,
+      MatDatepickerModule,
+      MatDialogModule,
+      MatExpansionModule,
+      MatFormFieldModule,
+      MatGridListModule,
+      MatChipsModule,
+      MatIconModule,
+      MatInputModule,
+      MatListModule,
+      MatMenuModule,
+      MatPaginatorModule,
+      MatProgressBarModule,
+      MatProgressSpinnerModule,
+      MatRadioModule,
+      MatSelectModule,
+      MatSidenavModule,
+      MatSliderModule,
+      MatSlideToggleModule,
+      MatSnackBarModule,
+      MatSortModule,
+      MatTableModule,
+      MatTabsModule,
+      MatToolbarModule,
+      MatTooltipModule,
+      MatStepperModule,
+    } from '@angular/material';
+
+    import {MatNativeDateModule, MatRippleModule} from '@angular/material';
+    import {CdkTableModule} from '@angular/cdk/table';
+    import {CdkAccordionModule} from '@angular/cdk/accordion';
+    import {A11yModule} from '@angular/cdk/a11y';
+    import {BidiModule} from '@angular/cdk/bidi';
+    import {OverlayModule} from '@angular/cdk/overlay';
+    import {PlatformModule} from '@angular/cdk/platform';
+    import {ObserversModule} from '@angular/cdk/observers';
+    import {PortalModule} from '@angular/cdk/portal';
+    
+    @NgModule({
+      exports: [
+        MatAutocompleteModule,
+        MatButtonModule,
+        MatButtonToggleModule,
+        MatCardModule,
+        MatCheckboxModule,
+        MatChipsModule,
+        MatTableModule,
+        MatDatepickerModule,
+        MatDialogModule,
+        MatExpansionModule,
+        MatFormFieldModule,
+        MatGridListModule,
+        MatIconModule,
+        MatInputModule,
+        MatListModule,
+        MatMenuModule,
+        MatPaginatorModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+        MatRadioModule,
+        MatRippleModule,
+        MatSelectModule,
+        MatSidenavModule,
+        MatSlideToggleModule,
+        MatSliderModule,
+        MatSnackBarModule,
+        MatSortModule,
+        MatStepperModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatTooltipModule,
+        MatNativeDateModule,
+        CdkTableModule,
+        A11yModule,
+        BidiModule,
+        CdkAccordionModule,
+        ObserversModule,
+        OverlayModule,
+        PlatformModule,
+        PortalModule,
+      ]
+    })
+    export class ${Name}MaterialModule {}
   ]]></content >
 	<tabTrigger>ngModuleMaterial</tabTrigger>
-	<scope>*.ts</scope>
-	<description>NgModule for Material</description>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material toolbar": {
-    "prefix": "m-toolbar",
-    "description": "Material toolbar",
-    "types": "typescript, html",
-    "body": [
-      "<mat-toolbar>",
-      "\t<span>${FirstRow}</span>",
-      "</mat-toolbar>$0"
-    ]
-  }
+    <mat-toolbar>
+      <span>${FirstRow}</span>
+    </mat-toolbar>$0
   ]]></content >
 	<tabTrigger>mdToolbar</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material toolbar row": {
-    "prefix": "m-toolbar-row",
-    "description": "Material toolbar row",
-    "types": "typescript, html",
-    "body": [
-      "<mat-toolbar-row>",
-      "\t<span>${FirstRow}</span>",
-      "</mat-toolbar-row>$0"
-    ]
-  }
+    <mat-toolbar-row>
+      <span>${FirstRow}</span>
+    </mat-toolbar-row>$0
   ]]></content >
 	<tabTrigger>mdToolbarRow</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material toolbar-multiRow": {
-    "prefix": "m-toolbar-multiRow",
-    "description": "Material Toolbar with multiple rows",
-    "types": "typescript, html",
-    "body": [
-      "<mat-toolbar>",
-      "\t<span>${FirstRow}</span>",
-      "\t<mat-toolbar-row>",
-      "\t\t<span>${SecondRow}</span>",
-      "\t</mat-toolbar-row>",
-      "\t<mat-toolbar-row>",
-      "\t\t<span>${ThirdRow}</span>",
-      "\t</mat-toolbar-row>",
-      "</mat-toolbar>$0"
-    ]
-  }
+    <mat-toolbar>
+      <span>${FirstRow}</span>
+      <mat-toolbar-row>
+        <span>${SecondRow}</span>
+      </mat-toolbar-row>
+      <mat-toolbar-row>
+        <span>${ThirdRow}</span>
+      </mat-toolbar-row>
+    </mat-toolbar>$0
   ]]></content >
 	<tabTrigger>mdToolbarMRow</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material FA Icon": {
-    "prefix": "m-icon-fontawesome",
-    "description": "Material Font Awesome Icon",
-    "types": "typescript, html",
-    "body": [
-      "<mat-icon mat-font-icon=\"fa-${icon}\" class=\"fa\"></mat-icon>$0"
-    ]
-  }
+    <mat-icon mat-font-icon="fa-${icon}" class="fa"></mat-icon>$0
   ]]></content >
 	<tabTrigger>mdIconFa</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Button": {
-    "prefix": "m-button",
-    "description": "Rectangular Material button w/ no elevation.",
-    "types": "typescript, html",
-    "body": [
-      "<button mat-button>${text}</button>$0"
-    ]
-  }
+    <button mat-button>${text}</button>$0
   ]]></content >
 	<tabTrigger>mdButton</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Raised Button": {
-    "prefix": "m-button-raised",
-    "description": "Rectangular Material button w/ elevation.",
-    "types": "typescript, html",
-    "body": [
-      "<button mat-raised-button>${text}</button>$0"
-    ]
-  }
+    <button mat-raised-button>${text}</button>$0
   ]]></content >
 	<tabTrigger>mdButtonRaised</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Icon Button": {
-    "prefix": "m-button-icon",
-    "description": "Circular Material button with a transparent background",
-    "types": "typescript, html",
-    "body": [
-      "<button mat-icon-button>%{text}</button>$0"
-    ]
-  }
+    <button mat-icon-button>%{text}</button>$0
   ]]></content >
 	<tabTrigger>mdButtonIcon</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Round Button": {
-    "prefix": "m-button-fab",
-    "description": "Circular button w/ elevation.",
-    "types": "typescript, html",
-    "body": [
-      "<button mat-fab><mat-icon>${icon_name}</mat-icon></button>$0"
-    ]
-  }
+    <button mat-fab><mat-icon>${icon_name}</mat-icon></button>$0
   ]]></content >
 	<tabTrigger>mdButtonFab</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Round Small Button": {
-    "prefix": "m-button-fab-mini",
-    "description": "Small circular button w/ elevation.",
-    "types": "typescript, html",
-    "body": [
-      "<button mat-mini-fab><mat-icon>${icon_name}</mat-icon></button>$0"
-    ]
-  }
+    <button mat-mini-fab><mat-icon>${icon_name}</mat-icon></button>$0
   ]]></content >
 	<tabTrigger>mdButtonFabMini</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Toggle Button": {
-    "prefix": "m-button-toggle",
-    "description": "Material toggle button",
-    "types": "typescript, html",
-    "body": [
-      "<mat-button-toggle>${text}</mat-button-toggle>$0"
-    ]
-  }
+    <mat-button-toggle>${text}</mat-button-toggle>$0
   ]]></content >
 	<tabTrigger>mdButtonToggle</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Basic Card": {
-    "prefix": "m-card",
-    "description": "Material Basic Card",
-    "types": "typescript, html",
-    "body": [
-      "<mat-card>",
-      "\t$1",
-      "</mat-card>$0"
-    ]
-  }
+    <mat-card>
+      $1
+    </mat-card>$0
   ]]></content >
 	<tabTrigger>mdCard</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Card": {
-    "prefix": "m-card-full",
-    "description": "Material Card",
-    "types": "typescript, html",
-    "body": [
-      "<mat-card>",
-      "\t<mat-card-header>",
-      "\t\t<mat-card-title>${title}</mat-card-title>",
-      "\t\t<mat-card-subtitle>${subtitle}</mat-card-subtitle>",
-      "\t</mat-card-header>",
-      "\t<mat-card-content>",
-      "\t$1",
-      "\t</mat-card-content>",
-      "\t<mat-card-actions>",
-      "\t\t<button mat-button>${Ok}</button>",
-      "\t</mat-card-actions>",
-      "</mat-card>$0"
-    ]
-  }
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>${title}</mat-card-title>
+        <mat-card-subtitle>${subtitle}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+      $1
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>${Ok}</button>
+      </mat-card-actions>
+    </mat-card>$0
   ]]></content >
 	<tabTrigger>mdCardFull</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Radio Button": {
-    "prefix": "m-radiobutton",
-    "description": "Material Radio Button",
-    "types": "typescript, html",
-    "body": [
-      "<mat-radio-group>",
-      "\t<mat-radio-button value=\"${value1}\">${Option1}</mat-radio-button>",
-      "\t<mat-radio-button value=\"${value2}\">${Option2}</mat-radio-button>",
-      "</mat-radio-group>$0"
-    ]
-  }
+    <mat-radio-group>
+      <mat-radio-button value="${value1}">${Option1}</mat-radio-button>
+      <mat-radio-button value="${value2}">${Option2}</mat-radio-button>
+    </mat-radio-group>$0
   ]]></content >
 	<tabTrigger>mdRadio</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Radio Button Option": {
-    "prefix": "m-radiobutton-option",
-    "description": "Material Radio Button Option",
-    "types": "typescript, html",
-    "body": [
-      "<mat-radio-button value=\"${value}\">${Option}</mat-radio-button>$0"
-    ]
-  }
+    <mat-radio-button value="${value}">${Option}</mat-radio-button>$0
   ]]></content >
 	<tabTrigger>mdRadioOption</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Checkbox ngmodel": {
-    "prefix": "m-checkbox-ngmodel",
-    "description": "Material Checkbox ngmodel",
-    "types": "typescript, html",
-    "body": [
-      "<mat-checkbox [(ngModel)]=\"${property.checkedOrUnchecked}\">${text}</mat-checkbox>$0"
-    ]
-  }
+    <mat-checkbox [(ngModel)]="${property.checkedOrUnchecked}">${text}</mat-checkbox>$0
   ]]></content >
 	<tabTrigger>mdCheckbox-model</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Checkbox": {
-    "prefix": "m-checkbox",
-    "description": "Material Checkbox",
-    "types": "typescript, html",
-    "body": [
-      "<mat-checkbox>${text}</mat-checkbox>$0"
-    ]
-  }
+    <mat-checkbox>${text}</mat-checkbox>$0
   ]]></content >
 	<tabTrigger>mdCheckbox</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Datepicker": {
-    "prefix": "m-datepicker",
-    "description": "Material Datepicker",
-    "types": "typescript, html",
-    "body": [
-      "<mat-form-field>",
-      "\t<input matInput [matDatepicker]=\"${picker}\" placeholder=\"${title}\">",
-      "\t<mat-datepicker-toggle matSuffix [for]=\"${picker}\"></mat-datepicker-toggle>",
-      "\t<button matSuffix [matDatepickerToggle]=\"${picker}\"></button>",
-      "\t<mat-datepicker #${picker}></mat-datepicker>",
-      "</mat-form-field>",
-      "$0"
-    ]
-  }
+    <mat-form-field>
+      <input matInput [matDatepicker]="${picker}" placeholder="${title}">
+      <mat-datepicker-toggle matSuffix [for]="${picker}"></mat-datepicker-toggle>
+      <button matSuffix [matDatepickerToggle]="${picker}"></button>
+      <mat-datepicker #${picker}></mat-datepicker>
+    </mat-form-field>$0
   ]]></content >
 	<tabTrigger>mdDatepicker</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Input Text": {
-    "prefix": "m-input",
-    "description": "Material Input Textbox",
-    "types": "typescript, html",
-    "body": [
-      "<mat-form-field>",
-      "\t<input matInput placeholder=\"${label}\" value=\"${value}\">",
-      "</mat-form-field>$0"
-    ]
-  }
+    <mat-form-field>
+      <input matInput placeholder="${label}" value="${value}">
+    </mat-form-field>$0
   ]]></content >
 	<tabTrigger>mdInput</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Chip List": {
-    "prefix": "m-chip-list",
-    "description": "Material Chip List",
-    "types": "typescript, html",
-    "body": [
-      "<mat-chip-list>",
-      "\t<mat-chip>${text}<mat-chip>",
-      "</mat-chip-list>$0"
-    ]
-  }
+    <mat-chip-list>
+      <mat-chip>${text}<mat-chip>
+    </mat-chip-list>$0
   ]]></content >
 	<tabTrigger>mdChipList</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Chip Stacked List": {
-    "prefix": "m-chip-list-stacked",
-    "description": "Material Chip Stacked List",
-    "types": "typescript, html",
-    "body": [
-      "<mat-chip-list class=\"mat-chip-list-stacked\">",
-      "\t<mat-chip>${text}<mat-chip>",
-      "</mat-chip-list>$0"
-    ]
-  }
+    <mat-chip-list class="mat-chip-list-stacked">
+      <mat-chip>${text}<mat-chip>
+    </mat-chip-list>$0
   ]]></content >
 	<tabTrigger>mdStackedList</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Chip": {
-    "prefix": "m-chip",
-    "description": "Material Chip",
-    "types": "typescript, html",
-    "body": [
-      "<mat-chip>${text}<mat-chip>$0"
-    ]
-  }
+    <mat-chip>${text}<mat-chip>$0
   ]]></content >
 	<tabTrigger>mdChip</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Select": {
-    "prefix": "m-select",
-    "description": "Material Select",
-    "types": "typescript, html",
-    "body": [
-      "<mat-select placeholder=\"${Placeholder}\" [(ngModel)]=\"selectedValue\" name=\"${item}\">",
-      "\t<mat-option *md=\"let ${item} of ${items}\" [value]=\"${item}.value\">",
-      "\t\t{{${item}.viewValue}}",
-      "\t</mat-option>",
-      "</mat-select>$0"
-    ]
-  }
+    <mat-select placeholder="${Placeholder}" [(ngModel)]="selectedValue" name="${item}">
+      <mat-option *md="let ${item} of ${items}" [value]="${item}.value">
+        {{${item}.viewValue}}
+      </mat-option>
+    </mat-select>$0
   ]]></content >
 	<tabTrigger>mdSelect-model</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material SVG Icon": {
-    "prefix": "m-icon-svg",
-    "description": "Material SVG Icon",
-    "types": "typescript, html",
-    "body": [
-      "<mat-icon svgIcon=\"${src}\"></mat-icon>$0"
-    ]
-  }
+    <mat-icon svgIcon="${src}"></mat-icon>$0
   ]]></content >
 	<tabTrigger>mdIconSvg</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Icon": {
-    "prefix": "m-icon",
-    "description": "Material Icon",
-    "types": "typescript, html",
-    "body": [
-      "<mat-icon>${icon}</mat-icon>$0"
-    ]
-  }
+    <mat-icon>${icon}</mat-icon>$0
   ]]></content >
 	<tabTrigger>mdIcon</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Icon with Badge": {
-    "prefix": "m-icon-badge",
-    "description": "Material Icon with a Badge",
-    "types": "typescript, html",
-    "body": [
-      "<mat-icon",
-      "\tcolor=\"primary\"" ,
-      "\tmatBadge=\"${number}\"",
-      "\tmatBadgePosition=\"${2|above,below|} ${3|after,before|}\"",
-      "\tmatBadgeColor=\"accent\">",
-      "\t\t${icon}",
-      "</mat-icon>$0"
-    ]
-  }
+    <mat-icon
+      color="primary"" ,
+      matBadge="${number}"
+      matBadgePosition="${2|above,below|} ${3|after,before|}"
+      matBadgeColor="accent">
+        ${icon}
+    </mat-icon>$0
   ]]></content >
 	<tabTrigger>mdBadge</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Slide Toggle": {
-    "prefix": "m-slide-toggle",
-    "description": "Material Slide toggle",
-    "types": "typescript, html",
-    "body": [
-      "<mat-slide-toggle>${text}</mat-slide-toggle>$0"
-    ]
-  }
+    <mat-slide-toggle>${text}</mat-slide-toggle>$0
   ]]></content >
 	<tabTrigger>mdSlideToggle</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Slider": {
-    "prefix": "m-slider",
-    "description": "Material Slider",
-    "types": "typescript, html",
-    "body": [
-      "<mat-slider min=\"${min}\" max=\"${max}\" step=\"${step}\" value=\"${value}\"></mat-slider>$0"
-    ]
-  }
+    <mat-slider min="${min}" max="${max}" step="${step}" value="${value}"></mat-slider>$0
   ]]></content >
 	<tabTrigger>mdSlider</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Vertical Slider": {
-    "prefix": "m-slider-vertical",
-    "description": "Material Vertical Slider",
-    "types": "typescript, html",
-    "body": [
-      "<mat-slider vertical min=\"${min}\" max=\"${max}\" step=\"${step}\" value=\"${value}\"></mat-slider>$0"
-    ]
-  }
+    <mat-slider vertical min="${min}" max="${max}" step="${step}" value="${value}"></mat-slider>$0
   ]]></content >
 	<tabTrigger>mdSliderVertical</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Slider Thumblabel": {
-    "prefix": "m-slider-thumbLabel",
-    "description": "Material Slider thumbLabel",
-    "types": "typescript, html",
-    "body": [
-      "<mat-slider thumbLabel tickInterval=\"${interval}\"></mat-slider>$0"
-    ]
-  }
+    <mat-slider thumbLabel tickInterval="${interval}"></mat-slider>$0
   ]]></content >
 	<tabTrigger>mdSliderThumbs</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Slider TickInterval": {
-    "prefix": "m-slider-tickInterval",
-    "description": "Material Slider tickInterval",
-    "types": "typescript, html",
-    "body": [
-      "<mat-slider step=\"${step}\" tickInterval=\"${interval}\"></mat-slider>$0"
-    ]
-  }
+    <mat-slider step="${step}" tickInterval="${interval}"></mat-slider>$0
   ]]></content >
 	<tabTrigger>mdSliderTick</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Slider TickInterval Auto": {
-    "prefix": "m-slider-tickInterval-auto",
-    "description": "Material Slider tickInterval Auto",
-    "types": "typescript, html",
-    "body": [
-      "<mat-slider tickInterval=\"auto\"></mat-slider>$0"
-    ]
-  }
+    <mat-slider tickInterval="auto"></mat-slider>$0
   ]]></content >
 	<tabTrigger>mdSliderTickAuto</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material List": {
-    "prefix": "m-list",
-    "description": "Material List",
-    "types": "typescript, html",
-    "body": [
-      "<mat-list>",
-      "\t<mat-list-item>${item}</mat-list-item>$1",
-      "</mat-list>$0"
-    ]
-  }
+    <mat-list>
+      <mat-list-item>${item}</mat-list-item>$1
+    </mat-list>$0
   ]]></content >
 	<tabTrigger>mdList</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material List md": {
-    "prefix": "m-list-ngfor",
-    "description": "Material List md",
-    "types": "typescript, html",
-    "body": [
-      "<mat-list>",
-      "\t<mat-list-item *md=\"let ${item} of ${items}\">{{ ${item} }}</mat-list-item>$1",
-      "</mat-list>$0"
-    ]
-  }
+    <mat-list>
+      <mat-list-item *md="let ${item} of ${items}">{{ ${item} }}</mat-list-item>$1
+    </mat-list>$0
   ]]></content >
 	<tabTrigger>mdListFor</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material List Item": {
-    "prefix": "m-list-item",
-    "description": "Material List Item",
-    "types": "typescript, html",
-    "body": [
-      "<mat-list-item>${item}</mat-list-item>$0"
-    ]
-  }
+    <mat-list-item>${item}</mat-list-item>$0
   ]]></content >
 	<tabTrigger>mdListItem</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Tab Group": {
-    "prefix": "m-tab-group",
-    "description": "Material Tab Group",
-    "types": "typescript, html",
-    "body": [
-      "<mat-tab-group>",
-      "\t<mat-tab label=\"${TabHeader1}\">$1</mat-tab>",
-      "\t<mat-tab label=\"${TabTabHeader2}\">$2</mat-tab>",
-      "</mat-tab-group>$0"
-    ]
-  }
+    <mat-tab-group>
+      <mat-tab label="${TabHeader1}">$1</mat-tab>
+      <mat-tab label="${TabTabHeader2}">$2</mat-tab>
+    </mat-tab-group>$0
   ]]></content >
 	<tabTrigger>mdTabGroup</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Tab": {
-    "prefix": "m-tab",
-    "description": "Material Tab",
-    "types": "typescript, html",
-    "body": [
-      "<mat-tab label=\"${TabHeader}\">$1</mat-tab>$0"
-    ]
-  }
+    <mat-tab label="${TabHeader}">$1</mat-tab>$0
   ]]></content >
 	<tabTrigger>mdTab</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Tooltip": {
-    "prefix": "m-tooltip",
-    "description": "Material Tooltip",
-    "types": "typescript, html",
-    "body": [
-      "matTooltip=\"${text}\"$0"
-    ]
-  }
+    matTooltip="${tex$0
   ]]></content >
 	<tabTrigger>mdTooltip</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Tooltip Position": {
-    "prefix": "m-tooltip-position",
-    "description": "Material Tooltip position",
-    "types": "typescript, html",
-    "body": [
-      "[matTooltipPosition]=\"${1|above,below,left,right,before,after|}\"$0"
-    ]
-  }
+    [matTooltipPosition]="${1|above,below,left,right,before,afte$0
   ]]></content >
 	<tabTrigger>mdTooltip-position</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Tooltip With Position": {
-    "prefix": "m-tooltip-with-position",
-    "description": "Material Tooltip with position",
-    "types": "typescript, html",
-    "body": [
-      "matTooltip=\"${text}\" [matTooltipPosition]=\"${1|above,below,left,right,before,after|}\"$0"
-    ]
-  }
+    matTooltip="${text}" [matTooltipPosition]="${1|above,below,left,right,before,afte$0
   ]]></content >
 	<tabTrigger>mdTooltipPosition</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Table": {
-    "prefix": "m-table",
-    "description": "Material Table",
-    "types": "typescript, html",
-    "body": [
-      "<mat-table #table [dataSource]=\"${dataSource}\">",
-      "\t<ng-container cdkColumnDef=\"${column}\">",
-      "\t\t<mat-header-cell *cdkHeaderCellDef> ${header} </mat-header-cell>",
-      "\t\t<mat-cell *cdkCellDef=\"let row\"> {{row.${column}}} </mat-cell>",
-      "\t</ng-container>",
-      "</mat-table>$0"
-    ]
-  }
+    <mat-table #table [dataSource]="${dataSource}">
+      <ng-container cdkColumnDef="${column}">
+        <mat-header-cell *cdkHeaderCellDef> ${header} </mat-header-cell>
+        <mat-cell *cdkCellDef="let row"> {{row.${column}}} </mat-cell>
+      </ng-container>
+    </mat-table>$0
   ]]></content >
 	<tabTrigger>mdTable</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Table Column": {
-    "prefix": "m-table-column",
-    "description": "Material Table Column",
-    "types": "typescript, html",
-    "body": [
-      "<ng-container cdkColumnDef=\"${column}\">",
-      "\t<mat-header-cell *cdkHeaderCellDef> ${header} </mat-header-cell>",
-      "\t<mat-cell *cdkCellDef=\"let row\"> {{row.${column}}} </mat-cell>",
-      "</ng-container>$0"
-    ]
-  }
+    <ng-container cdkColumnDef="${column}">
+      <mat-header-cell *cdkHeaderCellDef> ${header} </mat-header-cell>
+      <mat-cell *cdkCellDef="let row"> {{row.${column}}} </mat-cell>
+    </ng-container>$0
   ]]></content >
 	<tabTrigger>mdTableCol</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Grid List": {
-    "prefix": "m-grid-list",
-    "description": "Material Grid List",
-    "types": "typescript, html",
-    "body": [
-      "<mat-grid-list cols=\"${cols}\" rowHeight=\"${height}px\">",
-      "\t<mat-grid-tile",
-      "\t\t*md=\"let ${tile} of ${tiles}\"",
-      "\t\t[colspan]=\"${tile}.cols\"",
-      "\t\t[rowspan]=\"${tile}.rows\"",
-      "\t\t{{${tile}.text}}",
-      "\t</mat-grid-tile>",
-      "</mat-grid-list>$0"
-    ]
-  }
+    <mat-grid-list cols="${cols}" rowHeight="${height}px">
+      <mat-grid-tile
+        *md="let ${tile} of ${tiles}"
+        [colspan]="${tile}.cols"
+        [rowspan]="${tile}.rows"
+        {{${tile}.text}}
+      </mat-grid-tile>
+    </mat-grid-list>$0
   ]]></content >
 	<tabTrigger>mdGridList</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Paginator": {
-    "prefix": "m-paginator",
-    "description": "Material Paginator",
-    "types": "typescript, html",
-    "body": [
-      "<mat-paginator [length]=\"${length}\"",
-      "\t[pageSize]=\"${pageSize}\"",
-      "\t[pageSizeOptions]=\"${pageSizeOptions}\"",
-      "\t(page)=\"pageEvent = $${event}\">",
-      "</mat-paginator>$0"
-    ]
-  }
+    <mat-paginator [length]="${length}"
+      [pageSize]="${pageSize}"
+      [pageSizeOptions]="${pageSizeOptions}"
+      (page)="pageEvent = $${event}">
+    </mat-paginator>$0
   ]]></content >
 	<tabTrigger>mdPaginator</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Determinate Spinner": {
-    "prefix": "m-spinner",
-    "description": "Material Determinate Spinner",
-    "types": "typescript, html",
-    "body": [
-      "<mat-spinner",
-      "\t[value]=\"${value}\">",
-      "</mat-spinner>$0"
-    ]
-  }
+    <mat-spinner
+      [value]="${value}">
+    </mat-spinner>$0
   ]]></content >
 	<tabTrigger>mdSpinnerDet</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Indeterminate Progress Bar": {
-    "prefix": "m-progress-bar-indeterminate",
-    "description": "Material indeterminate Progress Bar",
-    "types": "typescript, html",
-    "body": [
-      "<mat-progress-bar",
-      "\tmode=\"indeterminate\"",
-      "</mat-progress-bar>$0"
-    ]
-  }
+    <mat-progress-bar
+      mode="indeterminate"
+    </mat-progress-bar>$0
   ]]></content >
 	<tabTrigger>mdProgressBar</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Query Progress Bar": {
-    "prefix": "m-progress-bar-query",
-    "description": "Material Query Progress Bar",
-    "types": "typescript, html",
-    "body": [
-      "<mat-progress-bar",
-      "\tmode=\"query\"",
-      "</mat-progress-bar>$0"
-    ]
-  }
+    <mat-progress-bar
+      mode="query"
+    </mat-progress-bar>$0
   ]]></content >
 	<tabTrigger>mdProgressBarQuery</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Buffer Progress Bar": {
-    "prefix": "m-progress-bar-buffer",
-    "description": "Material Buffer Progress Bar",
-    "types": "typescript, html",
-    "body": [
-      "<mat-progress-bar",
-      "\tmode=\"buffer\"",
-      "\t[color]=\"${color}\"",
-      "\t[value]=\"${value}\"",
-      "\t[bufferValue]=\"${bufferValue}\"",
-      "</mat-progress-bar>$0"
-    ]
-  }
+    <mat-progress-bar
+      mode="buffer"
+      [color]="${color}"
+      [value]="${value}"
+      [bufferValue]="${bufferValue}"
+    </mat-progress-bar>$0
   ]]></content >
 	<tabTrigger>mdProgressBarBuffer</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Determinate Progress Bar": {
-    "prefix": "m-progress-bar",
-    "description": "Material Determinate Progress Bar",
-    "types": "typescript, html",
-    "body": [
-      "<mat-progress-bar",
-      "\tmode=\"determinate\"",
-      "\t[value]=\"${value}\">",
-      "</mat-progress-bar>$0"
-    ]
-  }
+    <mat-progress-bar
+      mode="determinate"
+      [value]="${value}">
+    </mat-progress-bar>$0
   ]]></content >
 	<tabTrigger>mdProgressBarDet</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Expansion Panel ": {
-    "prefix": "m-expansion-panel",
-    "description": "Material Expansion Panel",
-    "types": "typescript, html",
-    "body": [
-      "<mat-expansion-panel>",
-      "\t<mat-expansion-panel-header>",
-      "\t\t${title}",
-      "\t</mat-expansion-panel-header>",
-      "\t${content}",   
-      "</mat-expansion-panel>$0"
-    ]
-  }
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        ${title}
+      </mat-expansion-panel-header>
+      ${content}   
+    </mat-expansion-panel>$0
   ]]></content >
 	<tabTrigger>mdExpansionPanel</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Vertical Stepper": {
-    "prefix": "m-stepper-vertical",
-    "description": "Material Vertical Stepper",
-    "types": "typescript, html",
-    "body": [
-      "<mat-vertical-stepper>",
-      "\t<mat-step label=\"${label1}\">",
-      "\t\t$1",
-      "\t</mat-step>",
-      "\t<mat-step label=\"${label2}\">",
-      "\t\t$2",
-      "\t</mat-step>",
-      "</mat-vertical-stepper>$0"
-    ]
-  }
+    <mat-vertical-stepper>
+      <mat-step label="${label1}">
+        $1
+      </mat-step>
+      <mat-step label="${label2}">
+        $2
+      </mat-step>
+    </mat-vertical-stepper>$0
   ]]></content >
 	<tabTrigger>mdStepperVertical</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Horizontal Stepper": {
-    "prefix": "m-stepper-horizontal",
-    "description": "Material Horizontal Stepper",
-    "types": "typescript, html",
-    "body": [
-      "<mat-horizontal-stepper>",
-      "\t<mat-step label=\"${label1}\">",
-      "\t\t$1",
-      "\t</mat-step>",
-      "\t<mat-step label=\"${label2}\">",
-      "\t\t$2",
-      "\t</mat-step>",
-      "</mat-horizontal-stepper>$0"
-    ]
-  }
+    <mat-horizontal-stepper>
+      <mat-step label="${label1}">
+        $1
+      </mat-step>
+      <mat-step label="${label2}">
+        $2
+      </mat-step>
+    </mat-horizontal-stepper>$0
   ]]></content >
 	<tabTrigger>mdStepperHorizontal</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Stepper Step": {
-    "prefix": "m-step",
-    "description": "Material Vertical Stepper",
-    "types": "typescript, html",
-    "body": [
-      "<mat-step label=\"${label}\">",
-      "\t$1",
-      "</mat-step>",
-      "$0"
-    ]
-  }
+    <mat-step label="${label}">
+      $1
+    </mat-step>$0
   ]]></content >
 	<tabTrigger>mdStep</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Indeterminate Spinner": {
-    "prefix": "m-spinner-indeterminate",
-    "description": "Material Indeterminate Spinner",
-    "types": "typescript, html",
-    "body": [
-      "<mat-spinner",
-      "\t[mode]=\"indeterminate\">",
-      "</mat-spinner>$0"
-    ]
-  }
+    <mat-spinner
+      [mode]="indeterminate">
+    </mat-spinner>$0
   ]]></content >
 	<tabTrigger>mdSpinner</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Divider": {
-    "prefix": "m-divider",
-    "description": "Material Divider",
-    "types": "typescript, html",
-    "body": [
-      "<mat-divider>",
-      "</mat-divider>$0"
-    ]
-  }
+    <mat-divider>
+    </mat-divider>$0
   ]]></content >
 	<tabTrigger>mdDivider</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Inset Divider": {
-    "prefix": "m-divider-inset",
-    "description": "Material Inset Divider",
-    "types": "typescript, html",
-    "body": [
-      "<mat-divider",
-      "\t[inset]=\"true\">",
-      "</mat-divider>$0"
-    ]
-  }
+    <mat-divider
+      [inset]="true">
+    </mat-divider>$0
   ]]></content >
 	<tabTrigger>mdDividerInset</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Material Vertical Divider": {
-    "prefix": "m-divider-vertical",
-    "description": "Material Vertical Divider",
-    "types": "typescript, html",
-    "body": [
-      "<mat-divider",
-      "\t[vertical]=\"true\">",
-      "</mat-divider>$0"
-    ]
-  }
+    <mat-divider
+      [vertical]="true">
+    </mat-divider>$0
   ]]></content >
 	<tabTrigger>mdDividerVertical</tabTrigger>
 </snippet>

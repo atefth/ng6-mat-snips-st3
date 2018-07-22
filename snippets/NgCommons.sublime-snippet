@@ -1,337 +1,169 @@
 <snippet>
   <content><![CDATA[
-  "Angular If Directive": {
-    "prefix": "ng-if",
-    "description": "If directive: *ngIf=\"expression\"",
-    "types": "typescript, html",
-    "body": [
-      "*ngIf=\"${expression}\""
-    ]
-  }
+    *ngIf="${expression}""
   ]]></content >
 	<tabTrigger>ngIf</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular If Else Directive": {
-    "prefix": "ng-if-else",
-    "description": "v4: If else directive: *ngIf=\"expression; else\"",
-    "types": "typescript, html",
-    "body": [
-      "<ng-container *ngIf=\"${expression}; else ${elseTemplate}\">",
-      "\t$1",
-      "</ng-container>",
-      "<ng-template #${elseTemplate}>",
-      "\t$2",
-      "</ng-template>",
-      "$0"
-    ]
-  }
+    <ng-container *ngIf="${expression}; else ${elseTemplate}">
+      $1
+    </ng-container>
+    <ng-template #${elseTemplate}>
+      $2
+    </ng-template>
+    $0
   ]]></content >
 	<tabTrigger>ngIfElse</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular If Then Else Directive": {
-    "prefix": "ng-if-then-else",
-    "description": "v4: If then else directive: *ngIf=\"expression; then; else\"",
-    "types": "typescript, html",
-    "body": [
-      "<ng-container *ngIf=\"${expression}; then ${thenTemplate}; else ${elseTemplate}\"></ng-container>",
-      "<ng-template #${thenTemplate}>",
-      "\t$1",
-      "</ng-template>",
-      "<ng-template #${elseTemplate}>",
-      "\t$2",
-      "</ng-template>",
-      "$0"
-    ]
-  }
+    <ng-container *ngIf="${expression}; then ${thenTemplate}; else ${elseTemplate}"></ng-container>
+    <ng-template #${thenTemplate}>
+    $1
+    </ng-template>
+    <ng-template #${elseTemplate}>
+    $2
+    </ng-template>
+    $0
   ]]></content >
 	<tabTrigger>ngIfThenElse</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular For-loop Directive": {
-    "prefix": "ng-for",
-    "description": "For-loop directive",
-    "types": "typescript, html",
-    "body": [
-      "*ngFor=\"let ${item} of ${items}\"$0"
-    ]
-  }
+    *ngFor="let ${item} of ${items}" $0
   ]]></content >
 	<tabTrigger>ngFor</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular For-loop Directive with li element": {
-    "prefix": "ng-for-li",
-    "description": "For-loop directive with li element",
-    "types": "typescript, html",
-    "body": [
-      "<li *ngFor=\"let ${item} of ${items}\">$0</li>"
-    ]
-  }
+    <li *ngFor="let ${item} of ${items}">$0</li>"
   ]]></content >
 	<tabTrigger>ngForLi</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular For-loop Directive with index": {
-    "prefix": "ng-for-index",
-    "description": "For-loop directive with index",
-    "types": "typescript, html",
-    "body": [
-      "*ngFor=\"let ${item} of ${items}; let i=index\"$0"
-    ]
-  }
+    *ngFor="let ${item} of ${items}; let i=index" $0
   ]]></content >
 	<tabTrigger>ngForIndex</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular For-loop Directive with trackBy": {
-    "prefix": "ng-for-trackBy",
-    "description": "For-loop directive with trackBy",
-    "types": "typescript, html",
-    "body": [
-      "*ngFor=\"let ${item} of ${items}; trackBy:${item}.id\"$0"
-    ]
-  }
+    *ngFor="let ${item} of ${items}; trackBy:${item}.id" $0
   ]]></content >
 	<tabTrigger>ngForTrackBy</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Class": {
-    "prefix": "ng-class",
-    "description": "CSS class",
-    "types": "typescript, html",
-    "body": [
-      "[ngClass]=\"{'${class}': ${true}}\"$0"
-    ]
-  }
+    [ngClass]="{'${class}': ${true}}" $0
   ]]></content >
 	<tabTrigger>ngClass</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Style": {
-    "prefix": "ng-style",
-    "description": "CSS style",
-    "types": "typescript, html",
-    "body": [
-      "[ngStyle]=\"{'${property}': ${expression}}\"$0"
-    ]
-  }
+    [ngStyle]="{'${property}': ${expression}}" $0
   ]]></content >
 	<tabTrigger>ngStyle</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Switch": {
-    "prefix": "ng-switch",
-    "description": "Switch template",
-    "types": "typescript, html",
-    "body": [
-      "<span [ngSwitch]=\"\">",
-      "<p *ngSwitchCase=\"true\">",
-      "",
-      "</p>",
-      "<p *ngSwitchCase=\"false\">",
-      "",
-      "</p>",
-      "<p *ngSwitchDefault>",
-      "",
-      "</p>",
-      "</span>"
-    ]
-  }
+    <span [ngSwitch]="">
+    <p *ngSwitchCase="true">
+    
+    </p>
+    <p *ngSwitchCase="false">
+    
+    </p>
+    <p *ngSwitchDefault>
+    
+    </p>
+    </span>"
   ]]></content >
 	<tabTrigger>ngSwitch</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Property": {
-    "prefix": "ng-property",
-    "description": "Property: [property]=\"expression\"",
-    "types": "typescript, html",
-    "body": [
-      "[${property}]=\"${expression}\"$0"
-    ]
-  }
+    [${property}]="${expression}" $0
   ]]></content >
 	<tabTrigger>ngProperty</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Event": {
-    "prefix": "ng-event",
-    "description": "Event: (event) = \"onEvent()\"",
-    "types": "typescript, html",
-    "body": [
-      "(${event}) = \"on${Event}()\"$0"
-    ]
-  }
+    (${event}) = "on${Event}()" $0
   ]]></content >
 	<tabTrigger>ngEvent</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Input Property": {
-    "prefix": "ng-input",
-    "description": "Class Input Property",
-    "types": "typescript",
-    "body": [
-      "@Input() ${class}: ${Class};$0"
-    ]
-  }
+    @Input() ${class}: ${Class};$0
   ]]></content >
 	<tabTrigger>ngInput</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Output Event": {
-    "prefix": "ng-output",
-    "description": "Class Output Event",
-    "types": "typescript",
-    "body": [
-      "@Output() ${methodName} = new EventEmitter<${Class}>();$0"
-    ]
-  }
+    @Output() ${methodName} = new EventEmitter<${Class}>();$0
   ]]></content >
 	<tabTrigger>ngOutput</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Oneway Binding": {
-    "prefix": "ng-binding-oneway",
-    "description": "Property: [property]=\"expression\"",
-    "types": "typescript, html",
-    "body": [
-      "[${property}]=\"${expression}\"$0"
-    ]
-  }
+    [${property}]="${expression}" $0
   ]]></content >
 	<tabTrigger>ngBind</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Twoway Binding": {
-    "prefix": "ng-binding-twoway",
-    "description": "Two-way data binding with the NgModel",
-    "types": "typescript, html",
-    "body": [
-      "[(ngModel)]=\"${Name}\"$0"
-    ]
-  }
+    [(ngModel)]="${Name}" $0
   ]]></content >
 	<tabTrigger>ngBindBoth</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Interpolation": {
-    "prefix": "ng-interpolation",
-    "description": "Interpolation: {{ interpolation }}",
-    "types": "typescript, html",
-    "body": [
-      "{{ ${interpolation} }}$0"
-    ]
-  }
+    {{ ${interpolation} }}$0
   ]]></content >
 	<tabTrigger>ngInterpolate</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Click Event": {
-    "prefix": "ng-click",
-    "description": "Click event",
-    "types": "typescript, html",
-    "body": [
-      "(click)=\"${expression}\"$0"
-    ]
-  }
+    (click)="${expression}" $0
   ]]></content >
 	<tabTrigger>ngClick</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Show Directive": {
-    "prefix": "ng-show",
-    "description": "Usage: Bind to the hidden property.",
-    "types": "typescript, html",
-    "body": [
-      "[hidden]=\"!${expression}\"$0"
-    ]
-  }
+    [hidden]="!${expression}" $0
   ]]></content >
 	<tabTrigger>ngShow</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Hide Directive": {
-    "prefix": "ng-hide",
-    "description": "Usage: Bind to the hidden property.",
-    "types": "typescript, html",
-    "body": [
-      "[hidden]=\"${expression}\"$0"
-    ]
-  }
+    [hidden]="${expression}" $0
   ]]></content >
 	<tabTrigger>ngHide</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Href Directive": {
-    "prefix": "ng-href",
-    "description": "Usage: Bind to the href property.",
-    "types": "typescript, html",
-    "body": [
-      "[href]=\"${url}\"$0"
-    ]
-  }
+    [href]="${url}" $0
   ]]></content >
 	<tabTrigger>ngHref</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Src Directive": {
-    "prefix": "ng-src",
-    "description": "Usage: Bind to the src property.",
-    "types": "typescript, html",
-    "body": [
-      "[src]=\"${url}\"$0"
-    ]
-  }
+    [src]="${url}" $0
   ]]></content >
 	<tabTrigger>ngSrc</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Submit Button": {
-    "prefix": "ng-button-submit",
-    "description": "A submit button element with a click event",
-    "types": "typescript, html",
-    "body": [
-      "<button type=\"submit\">${Submit}</button>",
-      "$0"
-    ]
-  }
+    <button type="submit">${Submit}</button>
+    $0
   ]]></content >
 	<tabTrigger>ngSubmit</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Click Button": {
-    "prefix": "ng-button",
-    "description": "A button element with a click event",
-    "types": "typescript, html",
-    "body": [
-      "<button (click)=\"${onClick()}\">${name}</button>",
-      "$0"
-    ]
-  }
+    <button (click)="${onClick()}">${name}</button>
+    $0
   ]]></content >
 	<tabTrigger>ngButton</tabTrigger>
 </snippet>

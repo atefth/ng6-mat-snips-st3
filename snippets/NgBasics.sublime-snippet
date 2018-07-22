@@ -1,81 +1,50 @@
 <snippet>
   <content><![CDATA[
-  "ng import": {
-    "prefix": "ng-import",
-    "description": "import module or component from path;",
-    "types": "typescript, html",
-    "body": [
-      "import { ${2:moduleOrComponent} } from '${1:path}';",
-      "$0"
-    ]
-  }
+    import { ${2:moduleOrComponent} } from '${1:path}';
+    $0
   ]]></content >
 	<tabTrigger>ngImport</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Bootstrapping": {
-    "prefix": "ng-bootstraping",
-    "description": "Bootstraping example",
-    "types": "typescript",
-    "body": [
-      "import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';",
-      "import { enableProdMode } from '@angular/core';",
-      "import { AppModule } from './app/app.module';",
-      "",
-      "if (environment.production) {",
-      "\tenableProdMode();",
-      "}",
-      "platformBrowserDynamic().bootstrapModule(AppModule)",
-      "\t.then(success => console.log(`Bootstrap success`))",
-      "\t.catch(err => console.error(err));",
-      "",
-      "// Move to separate file",
-      "export const environment = {",
-      "\tproduction: false",
-      "};"
-    ]
-  }
+    import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+    import { enableProdMode } from '@angular/core';
+    import { AppModule } from './app/app.module';
+
+    if (environment.production) {
+      tenableProdMode();
+    }
+    platformBrowserDynamic()
+    .bootstrapModule(AppModule)
+    .then(success => console.log('Bootstrap success'))
+    .catch(err => console.error(err));
+    
+    export const environment = {
+      production: false
+    };
   ]]></content >
 	<tabTrigger>ngBootstrap</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Service": {
-    "prefix": "ng-service",
-    "description": "Basic service",
-    "types": "typescript",
-    "body": [
-      "import { Injectable } from '@angular/core';",
-      "",
-      "@Injectable()",
-      "export class ${Name}Service {",
-      "$0}"
-    ]
-  }
+    import { Injectable } from '@angular/core';
+    
+    @Injectable()
+    export class ${Name}Service {$0}
   ]]></content >
 	<tabTrigger>ngService</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Http Interceptor": {
-    "prefix": "ng-http-interceptor",
-    "description": "Intercept an outgoing HttpRequest and optionally transform it or the response.",
-    "types": "typescript",
-    "body": [
-      "import { Injectable } from '@angular/core';",
-      "import {",
-      "\tHttpEvent, HttpInterceptor, HttpHandler, HttpRequest",
-      "} from '@angular/common/http';",
-      "",
-      "@Injectable()",
-      "export class ${1:Name}Interceptor implements HttpInterceptor {",
-      "\tintercept(req: HttpRequest<any>, next: HttpHandler) {",
-      "\t\treturn next.handle(req);",
-      "\t}",
-      "}"
-    ]
-  }
+    import { Injectable } from '@angular/core';
+    import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest } from '@angular/common/http';
+    
+    @Injectable()
+    export class ${1:Name}Interceptor implements HttpInterceptor {
+      intercept(req: HttpRequest<any>, next: HttpHandler) {
+        return next.handle(req);
+      }
+    }
   ]]></content >
 	<tabTrigger>ngHttpInterceptor</tabTrigger>
 </snippet>

@@ -1,201 +1,103 @@
 <snippet>
   <content><![CDATA[
-  "Angular Flex Layout Import": {
-    "prefix": "fx-import",
-    "description": "Flex Layout Import",
-    "types": "typescript, html",
-    "body": [
-      "import { FlexLayoutModule } from '@angular/flex-layout';",
-      "// Add ${FlexLayoutModule.forRoot()} to the @NgModule imports section"
-    ]
-  }
+    import { FlexLayoutModule } from '@angular/flex-layout';
+    // Add ${FlexLayoutModule.forRoot()} to the @NgModule imports section"
   ]]></content >
 	<tabTrigger>ngImportFlex</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Row": {
-    "prefix": "fx-row",
-    "description": "Flex Layout Row",
-    "types": "typescript, html",
-    "body": [
-      "<div fxLayout=\"row\" fxLayoutAlign=\"${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}\" fxLayoutGap=\"${gap}px\">",
-      "\t$0",
-      "</div>"
-    ]
-  }
+    <div fxLayout="row" fxLayoutAlign="${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}" fxLayoutGap="${gap}px">
+      $0
+    </div>"
   ]]></content >
 	<tabTrigger>ngFlexRow</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Layout": {
-    "prefix": "fx-layout",
-    "description": "Flex Layout Property",
-    "types": "typescript, html",
-    "body": [
-      "fxLayout=\"row\"$0"
-    ]
-  }
+    fxLayout="row"$0"
   ]]></content >
 	<tabTrigger>ngFlexLayout</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Layout Align": {
-    "prefix": "fx-layout-align",
-    "description": "Flex Layout Align Property",
-    "types": "typescript, html",
-    "body": [
-      "fxLayoutAlign=\"${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}\"$0"
-    ]
-  }
+    fxLayoutAlign="${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}"$0"
   ]]></content >
 	<tabTrigger>ngFlexAlign</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Layout Gap": {
-    "prefix": "fx-layout-gap",
-    "description": "Flex Layout Gap Property",
-    "types": "typescript, html",
-    "body": [
-      "fxLayoutGap=\"${gap}px\"$0"
-    ]
-  }
+    fxLayoutGap="${gap}px"$0"
   ]]></content >
 	<tabTrigger>ngFlexGap</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Reverse Row": {
-    "prefix": "fx-row-reverse",
-    "description": "Flex Layout Reverse Row",
-    "types": "typescript, html",
-    "body": [
-      "<div fxLayout=\"row-reverse\" fxLayoutAlign=\"${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}\" fxLayoutGap=\"${gap}px\">",
-      "\t$0",
-      "</div>"
-    ]
-  }
+    <div fxLayout="row-reverse" fxLayoutAlign="${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}" fxLayoutGap="${gap}px">
+      $0
+    </div>"
   ]]></content >
 	<tabTrigger>ngFlexReverseRow</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Column": {
-    "prefix": "fx-col",
-    "description": "Flex Layout Column",
-    "types": "typescript, html",
-    "body": [
-      "fxLayout=\"column\" fxLayoutAlign=\"${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}\" fxLayoutGap=\"${gap}px\">$0"
-    ]
-  }
+    fxLayout="column" fxLayoutAlign="${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}" fxLayoutGap="${gap}px">$0"
   ]]></content >
 	<tabTrigger>ngFlexCol</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Column with Element": {
-    "prefix": "fx-col-element",
-    "description": "Flex Layout Column with Element",
-    "types": "typescript, html",
-    "body": [
-      "<${1:div} fxLayout=\"column\" fxLayoutAlign=\"${2:|start,center,end,space-around,space-between|} ${4:|start,center,end,stretch|}\" fxLayoutGap=\"${gap}px\">",
-      "\t$0",
-      "</${1:div}>"
-    ]
-  }
+    <${1:div} fxLayout="column" fxLayoutAlign="${2:|start,center,end,space-around,space-between|} ${4:|start,center,end,stretch|}" fxLayoutGap="${gap}px">
+      $0
+    </${1:div}>"
   ]]></content >
 	<tabTrigger>ngFlexColElem</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Reverse Column": {
-    "prefix": "fx-col-reverse",
-    "description": "Flex Layout Reverse Column",
-    "types": "typescript, html",
-    "body": [
-      "<div fxLayout=\"column-reverse\" fxLayoutAlign=\"${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}\" fxLayoutGap=\"${gap}px\">",
-      "\t$0",
-      "</div>"
-    ]
-  }
+    <div fxLayout="column-reverse" fxLayoutAlign="${1|start,center,end,space-around,space-between|} ${2|start,center,end,stretch|}" fxLayoutGap="${gap}px">
+      $0
+    </div>"
   ]]></content >
 	<tabTrigger>ngFlexReverseCol</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Item": {
-    "prefix": "fx-item",
-    "description": "Flex Layout Item",
-    "types": "typescript, html",
-    "body": [
-      "<div fxFlex=\"${value}%\">",
-      "\t$0",
-      "</div>"
-    ]
-  }
+    <div fxFlex="${value}%">
+      $0
+    </div>"
   ]]></content >
 	<tabTrigger>ngFlexItem</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Item Offset": {
-    "prefix": "fx-item-offset",
-    "description": "Flex Layout Item with fxFlexOffset",
-    "types": "typescript, html",
-    "body": [
-      "<div fxFlex=\"${value}%\" fxFlexOffset=\"${offset}px\">",
-      "\t$0",
-      "</div>"
-    ]
-  }
+    <div fxFlex="${value}%" fxFlexOffset="${offset}px">
+      $0
+    </div>"
   ]]></content >
 	<tabTrigger>ngFlexItemOffset</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Item Order": {
-    "prefix": "fx-item-order",
-    "description": "Flex Layout Item with fxFlexOrder",
-    "types": "typescript, html",
-    "body": [
-      "<div fxFlex=\"${value}%\" fxFlexOrder=\"${order}\">",
-      "\t$0",
-      "</div>"
-    ]
-  }
+    <div fxFlex="${value}%" fxFlexOrder="${order}">
+      $0
+    </div>"
   ]]></content >
 	<tabTrigger>ngFlexItemOrer</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Item Align": {
-    "prefix": "fx-item-align",
-    "description": "Flex Layout Item with fxFlexAlign",
-    "types": "typescript, html",
-    "body": [
-      "<div fxFlex=\"${value}%\" fxFlexAlign=\"${1|start,baseline,center,end|}\">",
-      "\t$0",
-      "</div>"
-    ]
-  }
+    <div fxFlex="${value}%" fxFlexAlign="${1|start,baseline,center,end|}">
+      $0
+    </div>"
   ]]></content >
 	<tabTrigger>ngFlexItemAlign</tabTrigger>
 </snippet>
 <snippet>
   <content><![CDATA[
-  "Angular Flex Item Fill": {
-    "prefix": "fx-item-fill",
-    "description": "Flex Layout Item with fxFlexFill",
-    "types": "typescript, html",
-    "body": [
-      "<div fxFlex=\"${value}%\" fxFlexFill>",
-      "\t$0",
-      "</div>"
-    ]
-  }
+    <div fxFlex="${value}%" fxFlexFill>
+      $0
+    </div>"
   ]]></content >
 	<tabTrigger>ngFlexItemFill</tabTrigger>
 </snippet>
