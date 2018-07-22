@@ -1,2 +1,2 @@
-# ng6-mat-snips-st3
+# Angular (6) + Angular Material Snippets
 Sublime Text 3 Snippets for Angular (6) + Angular Material
