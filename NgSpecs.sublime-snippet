@@ -1,0 +1,248 @@
+<snippet>
+  <content><![CDATA[
+  "Angular spec for synchronous components": {
+    "prefix": "t-component-synchronous",
+    "description": "TODO",
+    "types": "typescript",
+    "body": [
+      "// synchronous beforeEach",
+      "beforeEach(() => {",
+      "\tfixture = TestBed.createComponent(${Name}Component);",
+      "\tcomp    = fixture.componentInstance;",
+      "\t${className}El  = fixture.debugElement.query(By.css('.${className}')); // find the element",
+      "",
+      "\t// pretend that it was wired to something that supplied a ${className}",
+      "\texpected${ClassName} = new ${ClassName}($1);",
+      "\tcomp.${className} = expected${ClassName};",
+      "\tfixture.detectChanges(); // trigger initial data binding",
+      "});",
+      "$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngSpecSyncComp</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular spec for asynchronous components": {
+    "prefix": "t-component-async",
+    "description": "TODO",
+    "types": "typescript",
+    "body": [
+      "// async beforeEach",
+      "beforeEach( async(() => {",
+      "\tTestBed.configureTestingModule({",
+      "\t\tdeclarations: [ ${Name}Component ],",
+      "\t})",
+      "\t.compileComponents(); // compile template and css",
+      "}));",
+      "$0"
+    ]
+  } 
+  ]]></content >
+	<tabTrigger>ngSpecAsyncComp</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular spec for directives": {
+    "prefix": "ng-test-directive",
+    "description": "TODO",
+    "types": "typescript",
+    "body": [
+      ""
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngSpecDir</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular spec for services": {
+    "prefix": "ng-test-service",
+    "description": "TODO",
+    "types": "typescript",
+    "body": [
+      ""
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngSpecServ</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular spec for pipes": {
+    "prefix": "t-pipe",
+    "description": "Test a pipe",
+    "types": "typescript",
+    "body": [
+      "describe('${Name}Pipe', () => {",
+      "\tlet pipe = new ${Name}Pipe();",
+      "",
+      "\tit('transforms \"${input}\" to \"${output}\"', () => {",
+      "\t\texpect(pipe.transform('${input}')).toBe('${output}');",
+      "\t});",
+      "});",
+      "$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngSpecPipe</tabTrigger>
+	<scope>*.ts</scope>
+	<description>Spec for pipe</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Test Describe, It & Expect": {
+    "prefix": "t-describe-it",
+    "description": "Describe, It & Expect",
+    "types": "typescript",
+    "body": [
+      "describe('${1:Description}', () => {",
+      "\tit('${2:Test}', () => {",
+      "\t\texpect($3).toBe($4);",
+      "\t});",
+      "});",
+      "$0"
+    ]
+  } 
+  ]]></content >
+  <tabTrigger>ngSpecAsyncComp</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Test It and Expect": {
+    "prefix": "t-ite",
+    "description": "It and Expect",
+    "types": "typescript",
+    "body": [
+      "it('${1:Test}', () => {",
+      "\texpect($2).toBe$3($4);",
+      "});",
+      "$0"
+    ]
+  } 
+  ]]></content >
+  <tabTrigger>ngTest-ite</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Test It": {
+    "prefix": "t-it",
+    "description": "It",
+    "types": "typescript",
+    "body": [
+      "it('${1:Test}', () => {",
+      "\t$2",
+      "});",
+      "$0"
+    ]
+  } 
+  ]]></content >
+  <tabTrigger>ngTest-it</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Test beforeEach": {
+    "prefix": "t-be",
+    "description": "beforeEach",
+    "types": "typescript",
+    "body": [
+      "beforeEach(function() {",
+      "\t$1",
+      "});",
+      "$0"
+    ]
+  } 
+  ]]></content >
+  <tabTrigger>ngTest-be</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Test afterEach Example": {
+    "prefix": "t-ae",
+    "description": "afterEach Example",
+    "types": "typescript",
+    "body": [
+      "afterEach(function() {",
+      "\t$1",
+      "});",
+      "$0"
+    ]
+  } 
+  ]]></content >
+  <tabTrigger>ngTest-ae</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Test beforeAll Example": {
+    "prefix": "t-ba",
+    "description": "beforeAll Example",
+    "types": "typescript",
+    "body": [
+      "beforeAll(function() {",
+      "\t$1",
+      "});",
+      "$0"
+    ]
+  } 
+  ]]></content >
+  <tabTrigger>ngTest-ba</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Test afterAll Example": {
+    "prefix": "t-aa",
+    "description": "afterAll Example",
+    "types": "typescript",
+    "body": [
+      "afterAll(function() {",
+      "\t$1",
+      "});",
+      "$0"
+    ]
+  } 
+  ]]></content >
+  <tabTrigger>ngTest-aa</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Test Expect toBe Example": {
+    "prefix": "t-etb",
+    "description": "Expect toBe Example",
+    "types": "typescript",
+    "body": [
+      "expect($2).toBe($3);",
+      "$0"
+    ]
+  } 
+  ]]></content >
+  <tabTrigger>ngTest-etb</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Test Expect Not toBe Example": {
+    "prefix": "t-entb",
+    "description": "Expect Not toBe",
+    "types": "typescript",
+    "body": [
+      "expect($2).not.toBe($3);",
+      "$0"
+    ]
+  } 
+  ]]></content >
+  <tabTrigger>ngTest-entb</tabTrigger>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Test Expect toBeFalsy Example": {
+    "prefix": "t-etbf",
+    "description": "Expect toBe Falsy",
+    "types": "typescript",
+    "body": [
+      "expect($2).toBeFalsy();",
+      "$0"
+    ]
+  } 
+  ]]></content >
+  <tabTrigger>ngTest-etbf</tabTrigger>
+</snippet>

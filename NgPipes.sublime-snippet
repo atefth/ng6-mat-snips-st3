@@ -1,0 +1,60 @@
+<snippet>
+  <content><![CDATA[
+  "Angular Pipe": {
+    "prefix": "ng-pipe",
+    "description": "Pipe template",
+    "types": "typescript",
+    "body": [
+      "import { Pipe, PipeTransform } from '@angular/core';",
+      "",
+      "@Pipe({name: '${name}'})",
+      "export class ${Name}Pipe implements PipeTransform {",
+      "\ttransform($1: $2): $3 {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngp</tabTrigger>
+	<scope>*.ts</scope>
+	<description>NgPipe (Impure)</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular Pure Pipe": {
+    "prefix": "ng-pure-pipe",
+    "description": "Pure Pipe template",
+    "types": "typescript",
+    "body": [
+      "import { Pipe, PipeTransform } from '@angular/core';",
+      "",
+      "@Pipe({name: '${name}', pure: true})",
+      "export class ${Name}Pipe implements PipeTransform {",
+      "\ttransform($1: $2): $3 {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngpp</tabTrigger>
+	<scope>*.ts</scope>
+	<description>NgPipe (Pure)</description>
+</snippet >
+<snippet>
+  <content><![CDATA[
+  "Angular Bult-in Pipes": {
+    "prefix": "ng-built-in-pipes",
+    "description": "Built-in pipes",
+    "types": "typescript, html",
+    "body": [
+      "{{ ${1} | ${2:uppercase|lowercase|titlecase|json|async|date/date:(\"MM/DD/YY\"/shortDate/fullDate)|decimal/percent:${digitInfo}|slice:${start}:${end}|currency:'${CURRENCY}'} }}$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngpd</tabTrigger>
+	<scope>*.ts</scope>
+	<description>Built-in NgPipes</description>
+</snippet >
+

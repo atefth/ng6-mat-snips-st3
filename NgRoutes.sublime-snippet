@@ -1,0 +1,318 @@
+<snippet>
+  <content><![CDATA[
+  "Angular Routing": {
+    "prefix": "ng-router",
+    "description": "Router template",
+    "types": "typescript",
+    "body": [
+      "import { Routes, RouterModule } from '@angular/router';",
+      "import { NgModule } from '@angular/core';",
+      "",
+      "import { ${Home}Component } from './';",
+      "import { ${Name2}Component } from './';",
+      "import { ${Name3}Component } from './';",
+      "import { ${Name4}Component } from './';",
+      "import { ${Name5}Component } from './';",
+      "import { PageNotFoundComponent } from './';",
+      "",
+      "const routes: Routes = [",
+      "\t{ path: '', component: ${Home}Component },",
+      "\t{ path: '${path2}', component: ${Name2}Component },",
+      "\t{ path: '${path3}', component: ${Name3}Component },",
+      "\t{ path: '${path4}', component: ${Name4}Component },",
+      "\t{ path: '${path5}', component: ${Name3}Component },",
+      "\t{ path: '${path6}', component: ${Name4}Component },",
+      "\t{ path: '**', component: PageNotFoundComponent },",
+      "",
+      "\t//{ path: 'path/:routeParam', component: MyComponent },",
+      "\t//{ path: 'staticPath', component: ... },",
+      "\t//{ path: '**', component: ... },",
+      "\t//{ path: 'oldPath', redirectTo: '/staticPath' },",
+      "\t//{ path: ..., component: ..., data: { message: 'Custom' }",
+      "];",
+      "",
+      "@NgModule({",
+      "\timports: [RouterModule.forChild(routes)],",
+      "\texports: [RouterModule]",
+      "})",
+      "export class ${Feature}RoutingModule {}",
+      "$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngRouter</tabTrigger>
+	<scope>*.ts</scope>
+	<description>ngRouter template for modules</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular App Module Routes": {
+    "prefix": "ng-router-appmodule",
+    "description": "Routes to include in root module",
+    "types": "typescript",
+    "body": [
+      "import { NgModule } from '@angular/core';",
+      "import { RouterModule, Routes } from '@angular/router';",
+      "",
+      "const routes: Routes = [",
+      "\t{ path: '', component: ${Home}Component },",
+      "\t{ path: '${path}', component: ${Feature}Component },",
+      "\t{ path: '**', component: PageNotFoundComponent },",
+      "];",
+      "",
+      "@NgModule({",
+      "\timports: [RouterModule.forRoot(routes)],",
+      "\texports: [RouterModule]",
+      "})",
+      "export class AppRoutingModule {}",
+      "$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngRouterApp</tabTrigger>
+	<scope>*.ts</scope>
+	<description>ngRouter template for app</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular Feature Module Routes": {
+    "prefix": "ng-router-featuremodule",
+    "description": "Routes to include in a feature module",
+    "types": "typescript",
+    "body": [
+      "import { NgModule } from '@angular/core';",
+      "import { RouterModule, Routes } from '@angular/router';",
+      "import { CommonModule } from '@angular/common';",
+      "",
+      "const routes: Routes = [",
+      "\t{ path: '${path}', component: ${Feature}Component }",
+      "];",
+      "",
+      "@NgModule({",
+      "\timports: [CommonModule, RouterModule.forChild(routes)],",
+      "\texports: [RouterModule]",
+      "})",
+      "export class ${Feature}RoutingModule {}",
+      "$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngRouterFeature</tabTrigger>
+	<scope>*.ts</scope>
+	<description>ngRoute template for features</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular routerLink with anchor": {
+    "prefix": "ng-link-to-route",
+    "description": "Link to route",
+    "types": "typescript, html",
+    "body": [
+      "<a [routerLink]=\"[ '/${path}', ${routeParam} ]\">${name}</a>$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>a-routerLink</tabTrigger>
+	<scope>*.ts</scope>
+	<description>Link to route</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular active routerLink with anchor": {
+    "prefix": "ng-router-link-active",
+    "description": "Router active link",
+    "types": "typescript, html",
+    "body": [
+      "<a [routerLink]=\"[ '/${path}' ]\" routerLinkActive=\"active\">${name}</a>$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>a-routerLinkActivee</tabTrigger>
+	<scope>*.ts</scope>
+	<description>Link to route (Active)</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular RouterLink as attribute": {
+    "prefix": "ng-router-link-attribute",
+    "description": "routerLink attribute",
+    "types": "typescript, html",
+    "body": [
+      "[routerLink]=\"[ '/${path}', ${routeParam} ]\"$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>routerLink</tabTrigger>
+	<scope>*.ts</scope>
+	<description>routerLink attribute</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular RouterLinkActive as attribute": {
+    "prefix": "ng-router-link-active-attribute",
+    "description": "routerLinkActive attribute",
+    "types": "typescript, html",
+    "body": [
+      routerLinkActive=\"active\"\"$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>routerLinkActive</tabTrigger>
+	<scope>*.ts</scope>
+	<description>routerLinkActive attribute</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular Router Outlet": {
+    "prefix": "ng-router-outlet",
+    "description": "Router outlet element",
+    "types": "typescript, html",
+    "body": [
+      "<router-outlet ${1:(name=\"${name}\")}></router-outlet>",
+      "$0"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>router-outlet</tabTrigger>
+	<scope>*.ts</scope>
+	<description>Router Outlet Element</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular Router CanActivate Interface": {
+    "prefix": "ng-can-activate",
+    "description": "CanActivate Implemenation",
+    "types": "typescript, html",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';",
+      "import { Observable } from 'rxjs';",
+      "",
+      "@Injectable()",
+      "export class ${CanActivate}Guard implements CanActivate {",
+      "\tcanActivate(",
+      "\t\troute: ActivatedRouteSnapshot,",
+      "\t\tstate: RouterStateSnapshot",
+      "\t): Observable<boolean> | Promise<boolean> | boolean {",
+      "\t\treturn true;$0",
+      "\t}",
+      "}",
+      ""
+    ]
+  }
+  ]]></content >
+	<tabTrigger>canActivate</tabTrigger>
+	<scope>*.ts</scope>
+	<description>CanActivate Implementation Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular Router CanActivateChild Interface": {
+    "prefix": "ng-route-guard-can-activate-child",
+    "description": "CanActivateChild Implementation",
+    "types": "typescript, html",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "import { CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';",
+      "import { Observable } from 'rxjs';",
+      "",
+      "@Injectable()",
+      "export class ${CanActivateChild}Guard implements CanActivateChild {",
+      "\tcanActivateChild(",
+      "\t\troute: ActivatedRouteSnapshot,",
+      "\t\tstate: RouterStateSnapshot",
+      "\t): Observable<boolean> | Promise<boolean> | boolean {",
+      "\t\treturn true;$0",
+      "\t}",
+      "}",
+      ""
+    ]
+  }
+  ]]></content >
+	<tabTrigger>canActivateChild</tabTrigger>
+	<scope>*.ts</scope>
+	<description>CanActivateChild Implementation Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular Router Resolve Interface": {
+    "prefix": "ng-route-resolve",
+    "description": "Resolve Implementation",
+    "types": "typescript, html",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';",
+      "import { Observable } from 'rxjs';",
+      "",
+      "@Injectable()",
+      "export class ${Resolve}Guard implements Resolve<${T}> {",
+      "\tresolve(",
+      "\t\troute: ActivatedRouteSnapshot,",
+      "\t\tstate: RouterStateSnapshot",
+      "\t): Observable<any> | Promise<any> | any {",
+      "\t\treturn true;$0",
+      "\t}",
+      "}",
+      ""
+    ]
+  }
+  ]]></content >
+	<tabTrigger>resolve</tabTrigger>
+	<scope>*.ts</scope>
+	<description>Resolve Implementation Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular Router CanLoad Interface": {
+    "prefix": "ng-route-can-load",
+    "description": "CanLoad Implementation",
+    "types": "typescript, html",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "import { CanLoad, Route } from '@angular/router';",
+      "import { Observable } from 'rxjs';",
+      "",
+      "@Injectable()",
+      "export class ${CanLoad}Guard implements CanLoad {",
+      "\tcanLoad(",
+      "\t\t${route}: Route",
+      "\t): Observable<boolean> | Promise<boolean> | boolean {",
+      "\t\treturn true;$0",
+      "\t}",
+      "}",
+      ""
+    ]
+  }
+  ]]></content >
+	<tabTrigger>canLoad</tabTrigger>
+	<scope>*.ts</scope>
+	<description>CanLoad Implementation Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular Router CanDeactivate Interface": {
+    "prefix": "ng-route-guard-can-deactivate",
+    "description": "CanDeactivate Implementation",
+    "types": "typescript, html",
+    "body": [
+      "import { Injectable } from '@angular/core';",
+      "import { CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';",
+      "import { Observable } from 'rxjs';",
+      "",
+      "@Injectable()",
+      "export class ${CanDeactivate}Guard implements CanDeactivate<${T}> {",
+      "\tcanDeactivate(",
+      "\t\tcomponent: ${T},",
+      "\t\troute: ActivatedRouteSnapshot,",
+      "\t\tstate: RouterStateSnapshot",
+      "\t): Observable<boolean> | Promise<boolean> | boolean {",
+      "\t\treturn true;$0",
+      "\t}",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>canDeactivate</tabTrigger>
+	<scope>*.ts</scope>
+	<description>CanDeactivate Implementation Function</description>
+</snippet>

@@ -1,0 +1,152 @@
+<snippet>
+  <content><![CDATA[
+  "Angular OnChanges Hook": {
+    "prefix": "ng-ngOnChanges",
+    "description": "Called before any other lifecycle hooks",
+    "types": "typescript",
+    "body": [
+      "ngOnChanges(changes: SimpleChanges): void {",
+      "\t//Called before any other lifecycle hooks. Use it to inject dependencies, but avoid any serious work here.",
+      "\t//Add '${implements OnChanges}' to the class.",
+      "\t$0",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngOnChanges</tabTrigger>
+	<scope>*.ts</scope>
+	<description>OnChanges Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular OnInit Hook": {
+    "prefix": "ng-onInit",
+    "description": "Called after the constructor",
+    "types": "typescript",
+    "body": [
+      "ngOnInit(): void {",
+      "\t//Called after the constructor, initializing input properties, and the first call to ngOnChanges.",
+      "\t//Add 'implements OnInit' to the class.",
+      "\t$0",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngOnInit</tabTrigger>
+	<scope>*.ts</scope>
+	<description>OnInit Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular DoCheck Hook": {
+    "prefix": "ng-doCheck",
+    "description": "Called every time that the input properties of a component or a directive are checked",
+    "types": "typescript",
+    "body": [
+      "ngDoCheck() {",
+      "\t//Called every time that the input properties of a component or a directive are checked. Use it to extend change detection by performing a custom check.",
+      "\t//Add 'implements DoCheck' to the class.",
+      "\t$0",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngDoCheck</tabTrigger>
+	<scope>*.ts</scope>
+	<description>DoCheck Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular AfterContentInit Hook": {
+    "prefix": "ng-afterContentInit",
+    "description": "Called after ngOnInit when the component's or directive's content has been initialized",
+    "types": "typescript",
+    "body": [
+      "ngAfterContentInit() {",
+      "\t//Called after ngOnInit when the component's or directive's content has been initialized.",
+      "\t//Add 'implements AfterContentInit' to the class.",
+      "\t$0",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngAfterContentInit</tabTrigger>
+	<scope>*.ts</scope>
+	<description>AfterContentInit Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular AfterContentChecked Hook": {
+    "prefix": "ng-afterContentChecked",
+    "description": "Called after every check of the component's or directive's content",
+    "types": "typescript",
+    "body": [
+      "ngAfterContentChecked() {",
+      "\t//Called after every check of the component's or directive's content.",
+      "\t//Add 'implements AfterContentChecked' to the class.",
+      "\t$0",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngAfterContentChecked</tabTrigger>
+	<scope>*.ts</scope>
+	<description>AfterContentChecked Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular AfterViewInit Hook": {
+    "prefix": "ng-afterViewInit",
+    "description": "Called after ngAfterContentInit when the component's view has been initialized",
+    "types": "typescript",
+    "body": [
+      "ngAfterViewInit() {",
+      "\t//Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.",
+      "\t//Add 'implements AfterViewInit' to the class.",
+      "\t$0",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngAfterViewInit</tabTrigger>
+	<scope>*.ts</scope>
+	<description>AfterViewInit Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular AfterViewChecked Hook": {
+    "prefix": "ng-afterViewChecked",
+    "description": "Called after every check of the component's view. Applies to components only",
+    "types": "typescript",
+    "body": [
+      "ngAfterViewChecked() {",
+      "\t//Called after every check of the component's view. Applies to components only.",
+      "\t//Add 'implements AfterViewChecked' to the class.",
+      "\t$0",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngAfterViewChecked</tabTrigger>
+	<scope>*.ts</scope>
+	<description>AfterViewChecked Function</description>
+</snippet>
+<snippet>
+  <content><![CDATA[
+  "Angular OnDestroy Hook": {
+    "prefix": "ng-onDestroy",
+    "description": "Called before the instance is destroyed",
+    "types": "typescript",
+    "body": [
+      "ngOnDestroy(): void {",
+      "\t//Called once, before the instance is destroyed.",
+      "\t//Add 'implements OnDestroy' to the class.",
+      "\t$0",
+      "}"
+    ]
+  }
+  ]]></content >
+	<tabTrigger>ngOnDestroy</tabTrigger>
+	<scope>*.ts</scope>
+	<description>OnDestroy Function</description>
+</snippet>
