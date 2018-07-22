@@ -1,143 +1,143 @@
 <snippet>
-  <content><![CDATA[
-    // synchronous beforeEach
-    beforeEach(() => {
-      fixture = TestBed.createComponent(${Name}Component);
-      comp    = fixture.componentInstance;
-      ${className}El  = fixture.debugElement.query(By.css('.${className}')); // find the element
-    
-      // pretend that it was wired to something that supplied a ${className}
-      expected${ClassName} = new ${ClassName}($1);
-      comp.${className} = expected${ClassName};
-      fixture.detectChanges(); // trigger initial data binding
-    });
-    $0
-  ]]></content >
+	<content><![CDATA[
+		// synchronous beforeEach
+		beforeEach(() => {
+			fixture = TestBed.createComponent(${Name}Component);
+			comp    = fixture.componentInstance;
+			${className}El  = fixture.debugElement.query(By.css('.${className}')); // find the element
+		
+			// pretend that it was wired to something that supplied a ${className}
+			expected${ClassName} = new ${ClassName}($1);
+			comp.${className} = expected${ClassName};
+			fixture.detectChanges(); // trigger initial data binding
+		});
+		$0
+	]]></content >
 	<tabTrigger>ngSpecSyncComp</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    // async beforeEach
-    beforeEach( async(() => {
-      TestBed.configureTestingModule({
-        declarations: [ ${Name}Component ],
-      })
-      .compileComponents(); // compile template and css
-    }));
-    $0
-  ]]></content >
+	<content><![CDATA[
+		// async beforeEach
+		beforeEach( async(() => {
+			TestBed.configureTestingModule({
+				declarations: [ ${Name}Component ],
+			})
+			.compileComponents(); // compile template and css
+		}));
+		$0
+	]]></content >
 	<tabTrigger>ngSpecAsyncComp</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    "
-  ]]></content >
+	<content><![CDATA[
+		"
+	]]></content >
 	<tabTrigger>ngSpecDir</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    "
-  ]]></content >
+	<content><![CDATA[
+		"
+	]]></content >
 	<tabTrigger>ngSpecServ</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    describe('${Name}Pipe', () => {
-      let pipe = new ${Name}Pipe();
-    
-      it('transforms "${input}" to "${output}"', () => {
-        expect(pipe.transform('${input}')).toBe('${output}');
-      });
-    });
-    $0
-  ]]></content >
+	<content><![CDATA[
+		describe('${Name}Pipe', () => {
+			let pipe = new ${Name}Pipe();
+		
+			it('transforms "${input}" to "${output}"', () => {
+				expect(pipe.transform('${input}')).toBe('${output}');
+			});
+		});
+		$0
+	]]></content >
 	<tabTrigger>ngSpecPipe</tabTrigger>
 	<scope>*.ts</scope>
 	<description>Spec for pipe</description>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    describe('${1:Description}', () => {
-      it('${2:Test}', () => {
-        expect($3).toBe($4);
-      });
-    });
-    $0
-  ]]></content >
-  <tabTrigger>ngSpecAsyncComp</tabTrigger>
+	<content><![CDATA[
+		describe('${1:Description}', () => {
+			it('${2:Test}', () => {
+				expect($3).toBe($4);
+			});
+		});
+		$0
+	]]></content >
+	<tabTrigger>ngSpecAsyncComp</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    it('${1:Test}', () => {
-      expect($2).toBe$3($4);
-    });
-    $0
-  ]]></content >
-  <tabTrigger>ngTest-ite</tabTrigger>
+	<content><![CDATA[
+		it('${1:Test}', () => {
+			expect($2).toBe$3($4);
+		});
+		$0
+	]]></content >
+	<tabTrigger>ngTest-ite</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    it('${1:Test}', () => {
-      $2
-    });
-    $0
-  ]]></content >
-  <tabTrigger>ngTest-it</tabTrigger>
+	<content><![CDATA[
+		it('${1:Test}', () => {
+			$2
+		});
+		$0
+	]]></content >
+	<tabTrigger>ngTest-it</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    beforeEach(function() {
-      $1
-    });
-    $0
-  ]]></content >
-  <tabTrigger>ngTest-be</tabTrigger>
+	<content><![CDATA[
+		beforeEach(function() {
+			$1
+		});
+		$0
+	]]></content >
+	<tabTrigger>ngTest-be</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    afterEach(function() {
-      $1
-    });
-    $0
-  ]]></content >
-  <tabTrigger>ngTest-ae</tabTrigger>
+	<content><![CDATA[
+		afterEach(function() {
+			$1
+		});
+		$0
+	]]></content >
+	<tabTrigger>ngTest-ae</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    beforeAll(function() {
-      $1
-    });
-    $0
-  ]]></content >
-  <tabTrigger>ngTest-ba</tabTrigger>
+	<content><![CDATA[
+		beforeAll(function() {
+			$1
+		});
+		$0
+	]]></content >
+	<tabTrigger>ngTest-ba</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    afterAll(function() {
-      $1
-    });
-    $0
-  ]]></content >
-  <tabTrigger>ngTest-aa</tabTrigger>
+	<content><![CDATA[
+		afterAll(function() {
+			$1
+		});
+		$0
+	]]></content >
+	<tabTrigger>ngTest-aa</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    expect($2).toBe($3);
-    $0
-  ]]></content >
-  <tabTrigger>ngTest-etb</tabTrigger>
+	<content><![CDATA[
+		expect($2).toBe($3);
+		$0
+	]]></content >
+	<tabTrigger>ngTest-etb</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    expect($2).not.toBe($3);
-    $0
-  ]]></content >
-  <tabTrigger>ngTest-entb</tabTrigger>
+	<content><![CDATA[
+		expect($2).not.toBe($3);
+		$0
+	]]></content >
+	<tabTrigger>ngTest-entb</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    expect($2).toBeFalsy();
-    $0
-  ]]></content >
-  <tabTrigger>ngTest-etbf</tabTrigger>
+	<content><![CDATA[
+		expect($2).toBeFalsy();
+		$0
+	]]></content >
+	<tabTrigger>ngTest-etbf</tabTrigger>
 </snippet>

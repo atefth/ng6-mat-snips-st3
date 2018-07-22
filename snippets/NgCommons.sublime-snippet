@@ -1,169 +1,169 @@
 <snippet>
-  <content><![CDATA[
-    *ngIf="${expression}""
-  ]]></content >
+	<content><![CDATA[
+		*ngIf="${expression}""
+	]]></content >
 	<tabTrigger>ngIf</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    <ng-container *ngIf="${expression}; else ${elseTemplate}">
-      $1
-    </ng-container>
-    <ng-template #${elseTemplate}>
-      $2
-    </ng-template>
-    $0
-  ]]></content >
+	<content><![CDATA[
+		<ng-container *ngIf="${expression}; else ${elseTemplate}">
+			$1
+		</ng-container>
+		<ng-template #${elseTemplate}>
+			$2
+		</ng-template>
+		$0
+	]]></content >
 	<tabTrigger>ngIfElse</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    <ng-container *ngIf="${expression}; then ${thenTemplate}; else ${elseTemplate}"></ng-container>
-    <ng-template #${thenTemplate}>
-    $1
-    </ng-template>
-    <ng-template #${elseTemplate}>
-    $2
-    </ng-template>
-    $0
-  ]]></content >
+	<content><![CDATA[
+		<ng-container *ngIf="${expression}; then ${thenTemplate}; else ${elseTemplate}"></ng-container>
+		<ng-template #${thenTemplate}>
+		$1
+		</ng-template>
+		<ng-template #${elseTemplate}>
+		$2
+		</ng-template>
+		$0
+	]]></content >
 	<tabTrigger>ngIfThenElse</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    *ngFor="let ${item} of ${items}" $0
-  ]]></content >
+	<content><![CDATA[
+		*ngFor="let ${item} of ${items}" $0
+	]]></content >
 	<tabTrigger>ngFor</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    <li *ngFor="let ${item} of ${items}">$0</li>"
-  ]]></content >
+	<content><![CDATA[
+		<li *ngFor="let ${item} of ${items}">$0</li>"
+	]]></content >
 	<tabTrigger>ngForLi</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    *ngFor="let ${item} of ${items}; let i=index" $0
-  ]]></content >
+	<content><![CDATA[
+		*ngFor="let ${item} of ${items}; let i=index" $0
+	]]></content >
 	<tabTrigger>ngForIndex</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    *ngFor="let ${item} of ${items}; trackBy:${item}.id" $0
-  ]]></content >
+	<content><![CDATA[
+		*ngFor="let ${item} of ${items}; trackBy:${item}.id" $0
+	]]></content >
 	<tabTrigger>ngForTrackBy</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    [ngClass]="{'${class}': ${true}}" $0
-  ]]></content >
+	<content><![CDATA[
+		[ngClass]="{'${class}': ${true}}" $0
+	]]></content >
 	<tabTrigger>ngClass</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    [ngStyle]="{'${property}': ${expression}}" $0
-  ]]></content >
+	<content><![CDATA[
+		[ngStyle]="{'${property}': ${expression}}" $0
+	]]></content >
 	<tabTrigger>ngStyle</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    <span [ngSwitch]="">
-    <p *ngSwitchCase="true">
-    
-    </p>
-    <p *ngSwitchCase="false">
-    
-    </p>
-    <p *ngSwitchDefault>
-    
-    </p>
-    </span>"
-  ]]></content >
+	<content><![CDATA[
+		<span [ngSwitch]="">
+		<p *ngSwitchCase="true">
+		
+		</p>
+		<p *ngSwitchCase="false">
+		
+		</p>
+		<p *ngSwitchDefault>
+		
+		</p>
+		</span>"
+	]]></content >
 	<tabTrigger>ngSwitch</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    [${property}]="${expression}" $0
-  ]]></content >
+	<content><![CDATA[
+		[${property}]="${expression}" $0
+	]]></content >
 	<tabTrigger>ngProperty</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    (${event}) = "on${Event}()" $0
-  ]]></content >
+	<content><![CDATA[
+		(${event}) = "on${Event}()" $0
+	]]></content >
 	<tabTrigger>ngEvent</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    @Input() ${class}: ${Class};$0
-  ]]></content >
+	<content><![CDATA[
+		@Input() ${class}: ${Class};$0
+	]]></content >
 	<tabTrigger>ngInput</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    @Output() ${methodName} = new EventEmitter<${Class}>();$0
-  ]]></content >
+	<content><![CDATA[
+		@Output() ${methodName} = new EventEmitter<${Class}>();$0
+	]]></content >
 	<tabTrigger>ngOutput</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    [${property}]="${expression}" $0
-  ]]></content >
+	<content><![CDATA[
+		[${property}]="${expression}" $0
+	]]></content >
 	<tabTrigger>ngBind</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    [(ngModel)]="${Name}" $0
-  ]]></content >
+	<content><![CDATA[
+		[(ngModel)]="${Name}" $0
+	]]></content >
 	<tabTrigger>ngBindBoth</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    {{ ${interpolation} }}$0
-  ]]></content >
+	<content><![CDATA[
+		{{ ${interpolation} }}$0
+	]]></content >
 	<tabTrigger>ngInterpolate</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    (click)="${expression}" $0
-  ]]></content >
+	<content><![CDATA[
+		(click)="${expression}" $0
+	]]></content >
 	<tabTrigger>ngClick</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    [hidden]="!${expression}" $0
-  ]]></content >
+	<content><![CDATA[
+		[hidden]="!${expression}" $0
+	]]></content >
 	<tabTrigger>ngShow</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    [hidden]="${expression}" $0
-  ]]></content >
+	<content><![CDATA[
+		[hidden]="${expression}" $0
+	]]></content >
 	<tabTrigger>ngHide</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    [href]="${url}" $0
-  ]]></content >
+	<content><![CDATA[
+		[href]="${url}" $0
+	]]></content >
 	<tabTrigger>ngHref</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    [src]="${url}" $0
-  ]]></content >
+	<content><![CDATA[
+		[src]="${url}" $0
+	]]></content >
 	<tabTrigger>ngSrc</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    <button type="submit">${Submit}</button>
-    $0
-  ]]></content >
+	<content><![CDATA[
+		<button type="submit">${Submit}</button>
+		$0
+	]]></content >
 	<tabTrigger>ngSubmit</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    <button (click)="${onClick()}">${name}</button>
-    $0
-  ]]></content >
+	<content><![CDATA[
+		<button (click)="${onClick()}">${name}</button>
+		$0
+	]]></content >
 	<tabTrigger>ngButton</tabTrigger>
 </snippet>

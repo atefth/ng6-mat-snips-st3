@@ -1,77 +1,77 @@
 <snippet>
-  <content><![CDATA[
-    import { State } from '@ngxs/store';
-    import { ${Name}StateModel } from './${name}.model';
-    
-    @State<${Name}StateModel>({
-      defaults: {
-      }
-    })
-    export class ${Name}State {}
-    $0
-  ]]></content >
-  <tabTrigger>ngXsState</tabTrigger>
+	<content><![CDATA[
+		import { State } from '@ngxs/store';
+		import { ${Name}StateModel } from './${name}.model';
+		
+		@State<${Name}StateModel>({
+			defaults: {
+			}
+		})
+		export class ${Name}State {}
+		$0
+	]]></content >
+	<tabTrigger>ngXsState</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    export interface ${Name}StateModel {$1
-    }
-    $0
-  ]]></content >
-  <tabTrigger>ngXsState-model</tabTrigger>
+	<content><![CDATA[
+		export interface ${Name}StateModel {$1
+		}
+		$0
+	]]></content >
+	<tabTrigger>ngXsState-model</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    export class ${Action} {
-      static readonly type = '[${FileName}] ${Action}]';
-    }
-    $0
-  ]]></content >
-  <tabTrigger>ngXsAction</tabTrigger>
+	<content><![CDATA[
+		export class ${Action} {
+			static readonly type = '[${FileName}] ${Action}]';
+		}
+		$0
+	]]></content >
+	<tabTrigger>ngXsAction</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    export class ${Action} {
-      static readonly type = '[${FileName}] ${Action}]';
-      constructor(public readonly payload?: ${type:any}) {}
-    }
-    $0
-  ]]></content >
-  <tabTrigger>ngXsAction-payload</tabTrigger>
+	<content><![CDATA[
+		export class ${Action} {
+			static readonly type = '[${FileName}] ${Action}]';
+			constructor(public readonly payload?: ${type:any}) {}
+		}
+		$0
+	]]></content >
+	<tabTrigger>ngXsAction-payload</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    NgxsModule.forRoot([
-      ${Name}State
-    ])
-    NgxsReduxDevtoolsPluginModule.forRoot(),
-    NgxsLoggerPluginModule.forRoot()$0
-  ]]></content >
-  <tabTrigger>ngXsStore</tabTrigger>
+	<content><![CDATA[
+		NgxsModule.forRoot([
+			${Name}State
+		])
+		NgxsReduxDevtoolsPluginModule.forRoot(),
+		NgxsLoggerPluginModule.forRoot()$0
+	]]></content >
+	<tabTrigger>ngXsStore</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { NgxsModule } from '@ngxs/store';
-    import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
-    import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
-    import { ${Name}State } from './${path}/${name}.state';
-    $0
-  ]]></content >
-  <tabTrigger>ngXsStore-import</tabTrigger>
+	<content><![CDATA[
+		import { NgxsModule } from '@ngxs/store';
+		import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
+		import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
+		import { ${Name}State } from './${path}/${name}.state';
+		$0
+	]]></content >
+	<tabTrigger>ngXsStore-import</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { Select } from '@ngxs/store';
-    
-    import { ${Name} State } from './${name}.state';
-    import { ${action} } from './${action}.actions';
-    
-    @Component({ ... })
-    export class ${Name}Component {
-     // Reads the name of the store from the store class
-     @Select(${Name}State) ${action}$: Observable<${type}>;
-    }
-    $0
-  ]]></content >
-  <tabTrigger>ngXsStore-select</tabTrigger>
+	<content><![CDATA[
+		import { Select } from '@ngxs/store';
+		
+		import { ${Name} State } from './${name}.state';
+		import { ${action} } from './${action}.actions';
+		
+		@Component({ ... })
+		export class ${Name}Component {
+		 // Reads the name of the store from the store class
+		 @Select(${Name}State) ${action}$: Observable<${type}>;
+		}
+		$0
+	]]></content >
+	<tabTrigger>ngXsStore-select</tabTrigger>
 </snippet>

@@ -1,103 +1,103 @@
 <snippet>
-  <content><![CDATA[
-    import * as ${class} from '../actions/${class}';
-    
-    export interface State {
-      $1
-    };
-    
-    const initialState: State = {
-      $2
-    };
-    
-    export function reducer(state = initialState, action: ${class}.Actions ): State {
-      switch (action.type) {
-        case ${class}.ActionTypes.${TYPE}: {
-          return {
-            // return new ${class} state
-          };
-        }
-    
-        default: {
-          return state;
-        }
-      }
-    }
-  ]]></content >
-  <tabTrigger>ngRxReducer</tabTrigger>
+	<content><![CDATA[
+		import * as ${class} from '../actions/${class}';
+		
+		export interface State {
+			$1
+		};
+		
+		const initialState: State = {
+			$2
+		};
+		
+		export function reducer(state = initialState, action: ${class}.Actions ): State {
+			switch (action.type) {
+				case ${class}.ActionTypes.${TYPE}: {
+					return {
+						// return new ${class} state
+					};
+				}
+		
+				default: {
+					return state;
+				}
+			}
+		}
+	]]></content >
+	<tabTrigger>ngRxReducer</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { Action } from '@ngrx/store';
-    
-    export enum ${Class}ActionTypes {
-      ${Verb1} = '[${Class}] ${Verb1}',
-      ${Verb2} = '[${Class}] ${Verb2}'
-    };
-    
-    export class ${Verb1} implements Action {
-      readonly type = ${Class}ActionTypes.${Verb1};
-      constructor(public payload: ${payloadType}) { }
-    }
-    
-    export class ${Verb2} implements Action {
-      readonly type = ${Class}ActionTypes.${Verb2};
-      constructor(public payload: ${payloadType2}) { }
-    }
-    
-    export type ${Class}Actions = ${Verb1} | ${Verb2};
-  ]]></content >
-  <tabTrigger>ngRxActions</tabTrigger>
+	<content><![CDATA[
+		import { Action } from '@ngrx/store';
+		
+		export enum ${Class}ActionTypes {
+			${Verb1} = '[${Class}] ${Verb1}',
+			${Verb2} = '[${Class}] ${Verb2}'
+		};
+		
+		export class ${Verb1} implements Action {
+			readonly type = ${Class}ActionTypes.${Verb1};
+			constructor(public payload: ${payloadType}) { }
+		}
+		
+		export class ${Verb2} implements Action {
+			readonly type = ${Class}ActionTypes.${Verb2};
+			constructor(public payload: ${payloadType2}) { }
+		}
+		
+		export type ${Class}Actions = ${Verb1} | ${Verb2};
+	]]></content >
+	<tabTrigger>ngRxActions</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    export const ${ACTION} = '[${NameSpace}] ${ACTION}';
-    $0
-  ]]></content >
-  <tabTrigger>ngRxAction</tabTrigger>
+	<content><![CDATA[
+		export const ${ACTION} = '[${NameSpace}] ${ACTION}';
+		$0
+	]]></content >
+	<tabTrigger>ngRxAction</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    export const ${ACTION} = '[${NameSpace}] ${ACTION}';
-    $0
-    export class ${Class} implements Action {
-      readonly type = ${ACTION};
-      constructor(public payload: ${payloadType}) { }
-    }
-  ]]></content >
-  <tabTrigger>ngRxAction-create</tabTrigger>
+	<content><![CDATA[
+		export const ${ACTION} = '[${NameSpace}] ${ACTION}';
+		$0
+		export class ${Class} implements Action {
+			readonly type = ${ACTION};
+			constructor(public payload: ${payloadType}) { }
+		}
+	]]></content >
+	<tabTrigger>ngRxAction-create</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    export class ${Verb} implements Action {
-      readonly type = ${Class}ActionTypes.${Verb};
-    
-      constructor(public payload: ${payloadType}) { }
-    }
-  ]]></content >
-  <tabTrigger>ngRxAction-enum</tabTrigger>
+	<content><![CDATA[
+		export class ${Verb} implements Action {
+			readonly type = ${Class}ActionTypes.${Verb};
+		
+			constructor(public payload: ${payloadType}) { }
+		}
+	]]></content >
+	<tabTrigger>ngRxAction-enum</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    ${Verb} = '[${Class}] ${Verb}'$0       
-  ]]></content >
-  <tabTrigger>ngRxEnum-actionType</tabTrigger>
+	<content><![CDATA[
+		${Verb} = '[${Class}] ${Verb}'$0       
+	]]></content >
+	<tabTrigger>ngRxEnum-actionType</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { Injectable } from '@angular/core';
-    import { Observable } from 'rxjs';
-    import { Action } from '@ngrx/store';
-    import { Actions, Effect } from '@ngrx/effects';
-    
-    @Injectable()
-    export class ${Name}Effects {
-      @Effect() ${name}$: Observable<Action> = this.actions$.ofType('${ACTIONTYPE}')$1;
-    
-      constructor(
-        private ${actions}$: Actions
-      ) {}
-    }
-  ]]></content >
-  <tabTrigger>ngRxEffect</tabTrigger>
+	<content><![CDATA[
+		import { Injectable } from '@angular/core';
+		import { Observable } from 'rxjs';
+		import { Action } from '@ngrx/store';
+		import { Actions, Effect } from '@ngrx/effects';
+		
+		@Injectable()
+		export class ${Name}Effects {
+			@Effect() ${name}$: Observable<Action> = this.actions$.ofType('${ACTIONTYPE}')$1;
+		
+			constructor(
+				private ${actions}$: Actions
+			) {}
+		}
+	]]></content >
+	<tabTrigger>ngRxEffect</tabTrigger>
 </snippet>

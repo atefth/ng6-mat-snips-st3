@@ -1,201 +1,201 @@
 <snippet>
-  <content><![CDATA[
-    import { Routes, RouterModule } from '@angular/router';
-    import { NgModule } from '@angular/core';
-    
-    import { ${Home}Component } from './';
-    import { ${Name2}Component } from './';
-    import { ${Name3}Component } from './';
-    import { ${Name4}Component } from './';
-    import { ${Name5}Component } from './';
-    import { PageNotFoundComponent } from './';
-    
-    const routes: Routes = [
-      { path: '', component: ${Home}Component },
-      { path: '${path2}', component: ${Name2}Component },
-      { path: '${path3}', component: ${Name3}Component },
-      { path: '${path4}', component: ${Name4}Component },
-      { path: '${path5}', component: ${Name3}Component },
-      { path: '${path6}', component: ${Name4}Component },
-      { path: '**', component: PageNotFoundComponent },
-    
-      //{ path: 'path/:routeParam', component: MyComponent },
-      //{ path: 'staticPath', component: ... },
-      //{ path: '**', component: ... },
-      //{ path: 'oldPath', redirectTo: '/staticPath' },
-      //{ path: ..., component: ..., data: { message: 'Custom' }
-    ];
-    
-    @NgModule({
-      imports: [RouterModule.forChild(routes)],
-      exports: [RouterModule]
-    })
-    export class ${Feature}RoutingModule {}
-    $0
-  ]]></content >
+	<content><![CDATA[
+		import { Routes, RouterModule } from '@angular/router';
+		import { NgModule } from '@angular/core';
+		
+		import { ${Home}Component } from './';
+		import { ${Name2}Component } from './';
+		import { ${Name3}Component } from './';
+		import { ${Name4}Component } from './';
+		import { ${Name5}Component } from './';
+		import { PageNotFoundComponent } from './';
+		
+		const routes: Routes = [
+			{ path: '', component: ${Home}Component },
+			{ path: '${path2}', component: ${Name2}Component },
+			{ path: '${path3}', component: ${Name3}Component },
+			{ path: '${path4}', component: ${Name4}Component },
+			{ path: '${path5}', component: ${Name3}Component },
+			{ path: '${path6}', component: ${Name4}Component },
+			{ path: '**', component: PageNotFoundComponent },
+		
+			//{ path: 'path/:routeParam', component: MyComponent },
+			//{ path: 'staticPath', component: ... },
+			//{ path: '**', component: ... },
+			//{ path: 'oldPath', redirectTo: '/staticPath' },
+			//{ path: ..., component: ..., data: { message: 'Custom' }
+		];
+		
+		@NgModule({
+			imports: [RouterModule.forChild(routes)],
+			exports: [RouterModule]
+		})
+		export class ${Feature}RoutingModule {}
+		$0
+	]]></content >
 	<tabTrigger>ngRouter</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { NgModule } from '@angular/core';
-    import { RouterModule, Routes } from '@angular/router';
-    
-    const routes: Routes = [
-      { path: '', component: ${Home}Component },
-      { path: '${path}', component: ${Feature}Component },
-      { path: '**', component: PageNotFoundComponent },
-    ];
-    
-    @NgModule({
-      imports: [RouterModule.forRoot(routes)],
-      exports: [RouterModule]
-    })
-    export class AppRoutingModule {}
-    $0
-  ]]></content >
+	<content><![CDATA[
+		import { NgModule } from '@angular/core';
+		import { RouterModule, Routes } from '@angular/router';
+		
+		const routes: Routes = [
+			{ path: '', component: ${Home}Component },
+			{ path: '${path}', component: ${Feature}Component },
+			{ path: '**', component: PageNotFoundComponent },
+		];
+		
+		@NgModule({
+			imports: [RouterModule.forRoot(routes)],
+			exports: [RouterModule]
+		})
+		export class AppRoutingModule {}
+		$0
+	]]></content >
 	<tabTrigger>ngRouterApp</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { NgModule } from '@angular/core';
-    import { RouterModule, Routes } from '@angular/router';
-    import { CommonModule } from '@angular/common';
-    
-    const routes: Routes = [
-      { path: '${path}', component: ${Feature}Component }
-    ];
-    
-    @NgModule({
-      imports: [CommonModule, RouterModule.forChild(routes)],
-      exports: [RouterModule]
-    })
-    export class ${Feature}RoutingModule {}
-    $0
-  ]]></content >
+	<content><![CDATA[
+		import { NgModule } from '@angular/core';
+		import { RouterModule, Routes } from '@angular/router';
+		import { CommonModule } from '@angular/common';
+		
+		const routes: Routes = [
+			{ path: '${path}', component: ${Feature}Component }
+		];
+		
+		@NgModule({
+			imports: [CommonModule, RouterModule.forChild(routes)],
+			exports: [RouterModule]
+		})
+		export class ${Feature}RoutingModule {}
+		$0
+	]]></content >
 	<tabTrigger>ngRouterFeature</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    <a [routerLink]="[ '/${path}', ${routeParam} ]">${name}</a>$0
-  ]]></content >
+	<content><![CDATA[
+		<a [routerLink]="[ '/${path}', ${routeParam} ]">${name}</a>$0
+	]]></content >
 	<tabTrigger>a-routerLink</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    <a [routerLink]="[ '/${path}' ]" routerLinkActive="active">${name}</a>$0
-  ]]></content >
+	<content><![CDATA[
+		<a [routerLink]="[ '/${path}' ]" routerLinkActive="active">${name}</a>$0
+	]]></content >
 	<tabTrigger>a-routerLinkActivee</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    [routerLink]="[ '/${path}', ${routeParam} ]"$0
-  ]]></content >
+	<content><![CDATA[
+		[routerLink]="[ '/${path}', ${routeParam} ]"$0
+	]]></content >
 	<tabTrigger>routerLink</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-      routerLinkActive="active""$0
-  ]]></content >
+	<content><![CDATA[
+			routerLinkActive="active""$0
+	]]></content >
 	<tabTrigger>routerLinkActive</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    <router-outlet ${1:(name="${name}")}></router-outlet>
-    $0
-  ]]></content >
+	<content><![CDATA[
+		<router-outlet ${1:(name="${name}")}></router-outlet>
+		$0
+	]]></content >
 	<tabTrigger>router-outlet</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { Injectable } from '@angular/core';
-    import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-    import { Observable } from 'rxjs';
-    
-    @Injectable()
-    export class ${CanActivate}Guard implements CanActivate {
-      canActivate(
-        route: ActivatedRouteSnapshot,
-        state: RouterStateSnapshot
-      ): Observable<boolean> | Promise<boolean> | boolean {
-        return true;$0
-      }
-    }
-    "
-  ]]></content >
+	<content><![CDATA[
+		import { Injectable } from '@angular/core';
+		import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+		import { Observable } from 'rxjs';
+		
+		@Injectable()
+		export class ${CanActivate}Guard implements CanActivate {
+			canActivate(
+				route: ActivatedRouteSnapshot,
+				state: RouterStateSnapshot
+			): Observable<boolean> | Promise<boolean> | boolean {
+				return true;$0
+			}
+		}
+		"
+	]]></content >
 	<tabTrigger>canActivate</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { Injectable } from '@angular/core';
-    import { CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-    import { Observable } from 'rxjs';
-    
-    @Injectable()
-    export class ${CanActivateChild}Guard implements CanActivateChild {
-      canActivateChild(
-        route: ActivatedRouteSnapshot,
-        state: RouterStateSnapshot
-      ): Observable<boolean> | Promise<boolean> | boolean {
-        return true;$0
-      }
-    }
-    "
-  ]]></content >
+	<content><![CDATA[
+		import { Injectable } from '@angular/core';
+		import { CanActivateChild, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+		import { Observable } from 'rxjs';
+		
+		@Injectable()
+		export class ${CanActivateChild}Guard implements CanActivateChild {
+			canActivateChild(
+				route: ActivatedRouteSnapshot,
+				state: RouterStateSnapshot
+			): Observable<boolean> | Promise<boolean> | boolean {
+				return true;$0
+			}
+		}
+		"
+	]]></content >
 	<tabTrigger>canActivateChild</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { Injectable } from '@angular/core';
-    import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-    import { Observable } from 'rxjs';
-    
-    @Injectable()
-    export class ${Resolve}Guard implements Resolve<${T}> {
-      resolve(
-        route: ActivatedRouteSnapshot,
-        state: RouterStateSnapshot
-      ): Observable<any> | Promise<any> | any {
-        return true;$0
-      }
-    }
-    "
-  ]]></content >
+	<content><![CDATA[
+		import { Injectable } from '@angular/core';
+		import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+		import { Observable } from 'rxjs';
+		
+		@Injectable()
+		export class ${Resolve}Guard implements Resolve<${T}> {
+			resolve(
+				route: ActivatedRouteSnapshot,
+				state: RouterStateSnapshot
+			): Observable<any> | Promise<any> | any {
+				return true;$0
+			}
+		}
+		"
+	]]></content >
 	<tabTrigger>resolve</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { Injectable } from '@angular/core';
-    import { CanLoad, Route } from '@angular/router';
-    import { Observable } from 'rxjs';
-    
-    @Injectable()
-    export class ${CanLoad}Guard implements CanLoad {
-      canLoad(
-        ${route}: Route
-      ): Observable<boolean> | Promise<boolean> | boolean {
-        return true;$0
-      }
-    }
-    "
-  ]]></content >
+	<content><![CDATA[
+		import { Injectable } from '@angular/core';
+		import { CanLoad, Route } from '@angular/router';
+		import { Observable } from 'rxjs';
+		
+		@Injectable()
+		export class ${CanLoad}Guard implements CanLoad {
+			canLoad(
+				${route}: Route
+			): Observable<boolean> | Promise<boolean> | boolean {
+				return true;$0
+			}
+		}
+		"
+	]]></content >
 	<tabTrigger>canLoad</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { Injectable } from '@angular/core';
-    import { CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-    import { Observable } from 'rxjs';
-    
-    @Injectable()
-    export class ${CanDeactivate}Guard implements CanDeactivate<${T}> {
-      canDeactivate(
-        component: ${T},
-        route: ActivatedRouteSnapshot,
-        state: RouterStateSnapshot
-      ): Observable<boolean> | Promise<boolean> | boolean {
-        return true;$0
-      }
-    }"
-  ]]></content >
+	<content><![CDATA[
+		import { Injectable } from '@angular/core';
+		import { CanDeactivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+		import { Observable } from 'rxjs';
+		
+		@Injectable()
+		export class ${CanDeactivate}Guard implements CanDeactivate<${T}> {
+			canDeactivate(
+				component: ${T},
+				route: ActivatedRouteSnapshot,
+				state: RouterStateSnapshot
+			): Observable<boolean> | Promise<boolean> | boolean {
+				return true;$0
+			}
+		}"
+	]]></content >
 	<tabTrigger>canDeactivate</tabTrigger>
 </snippet>

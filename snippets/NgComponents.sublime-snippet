@@ -1,164 +1,164 @@
 <snippet>
-  <content><![CDATA[
-    import { Component, OnInit } from '@angular/core';
-    
-    @Component({
-      selector: '${1:app}-${2:name}',
-      templateUrl: './${2:name}.component.html',
-      styleUrls: ['./${2:name}.component.${3|scss,less,css|}']
-    })
-    export class ${4:Name}Component implements OnInit {
+	<content><![CDATA[
+		import { Component, OnInit } from '@angular/core';
+		
+		@Component({
+			selector: '${1:app}-${2:name}',
+			templateUrl: './${2:name}.component.html',
+			styleUrls: ['./${2:name}.component.${3|scss,less,css|}']
+		})
+		export class ${4:Name}Component implements OnInit {
 
-      constructor($5) { }
-      
-      ngOnInit(): void { ${6: } }
-    }
-    $0
-  ]]></content >
+			constructor($5) { }
+			
+			ngOnInit(): void { ${6: } }
+		}
+		$0
+	]]></content >
 	<tabTrigger>ngComponent</tabTrigger>
 </snippet >
 <snippet>
-  <content><![CDATA[
-    import { Component, OnInit } from '@angular/core';
-    
-    @Component({
-      selector: '${1:app}-${2:name}',
-      template: '${3}',
-      styles: ['${4}']
-    })
-    export class ${5:Name}Component implements OnInit {
+	<content><![CDATA[
+		import { Component, OnInit } from '@angular/core';
+		
+		@Component({
+			selector: '${1:app}-${2:name}',
+			template: '${3}',
+			styles: ['${4}']
+		})
+		export class ${5:Name}Component implements OnInit {
 
-      constructor($6) { }
-    
-      ngOnInit(): void { ${7: } }
-    }
-    $0
-  ]]></content >
+			constructor($6) { }
+		
+			ngOnInit(): void { ${7: } }
+		}
+		$0
+	]]></content >
 	<tabTrigger>ngComponentInline</tabTrigger>
 </snippet >
 <snippet>
-  <content><![CDATA[
-    import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
-    import { Component, Input, OnInit, forwardRef } from '@angular/core';
-    
-    export const ${1:COMPONENT_NAME}_VALUE_ACCESSOR: any = {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => ${2:ComponentName}Component),
-      multi: true
-    };
-    
-    @Component({
-      selector: '${3:selector-name}',
-      templateUrl: './${4:name}.component.html',
-      styleUrls: ['./${4:name}.component.css'],
-      providers: [${1:COMPONENT_NAME}_VALUE_ACCESSOR]
-    })
-    export class ${2:ComponentName}Component implements OnInit, ControlValueAccessor {
-    
-      private _value: any;
-      
-      set value(value: any) {
-        this._value = value;
-        this.notifyValueChange();
-      }
-      
-      get value() {
-        return this._value;
-      }
-      
-      onChange: (value) => {};
-      onTouched: () => {};
-      
-      constructor() { }
-      
-      notifyValueChange() {
-        if (this.onChange) {
-          this.onChange(this.value);
-        }
-      }
-      
-      ngOnInit(): void {
-      
-      }
-      
-      writeValue(obj: any): void {
-        this.value = obj;
-      }
-      
-      registerOnChange(fn: any): void {
-        this.onChange = fn;
-      }
-      
-      registerOnTouched(fn: any): void {
-        this.onTouched = fn;
-      }
-      
-      setDisabledState(isDisabled: boolean): void { }
-    }
-    $0
-  ]]></content >
+	<content><![CDATA[
+		import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+		import { Component, Input, OnInit, forwardRef } from '@angular/core';
+		
+		export const ${1:COMPONENT_NAME}_VALUE_ACCESSOR: any = {
+			provide: NG_VALUE_ACCESSOR,
+			useExisting: forwardRef(() => ${2:ComponentName}Component),
+			multi: true
+		};
+		
+		@Component({
+			selector: '${3:selector-name}',
+			templateUrl: './${4:name}.component.html',
+			styleUrls: ['./${4:name}.component.css'],
+			providers: [${1:COMPONENT_NAME}_VALUE_ACCESSOR]
+		})
+		export class ${2:ComponentName}Component implements OnInit, ControlValueAccessor {
+		
+			private _value: any;
+			
+			set value(value: any) {
+				this._value = value;
+				this.notifyValueChange();
+			}
+			
+			get value() {
+				return this._value;
+			}
+			
+			onChange: (value) => {};
+			onTouched: () => {};
+			
+			constructor() { }
+			
+			notifyValueChange() {
+				if (this.onChange) {
+					this.onChange(this.value);
+				}
+			}
+			
+			ngOnInit(): void {
+			
+			}
+			
+			writeValue(obj: any): void {
+				this.value = obj;
+			}
+			
+			registerOnChange(fn: any): void {
+				this.onChange = fn;
+			}
+			
+			registerOnTouched(fn: any): void {
+				this.onTouched = fn;
+			}
+			
+			setDisabledState(isDisabled: boolean): void { }
+		}
+		$0
+	]]></content >
 	<tabTrigger>ngComponentForForm</tabTrigger>
 </snippet>
 <snippet>
-  <content><![CDATA[
-    import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
-    import { Component, Input, OnInit, forwardRef } from '@angular/core';
-    
-    export const ${1:COMPONENT_NAME}_VALUE_ACCESSOR: any = {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => ${2:ComponentName}Component),
-      multi: true
-    };
-    
-    @Component({
-      selector: '${3:selector-name}',
-      template: '${4}',
-      styles: ['${5}']
-      providers: [${1:COMPONENT_NAME}_VALUE_ACCESSOR]
-    })
-    export class ${2:ComponentName}Component implements OnInit, ControlValueAccessor {
-    
-      private _value: any;
-      
-      set value(value: any) {
-        this._value = value;
-        this.notifyValueChange();
-      }
-      
-      get value() {
-        return this._value;
-      }
-      
-      onChange: (value) => {};
-      onTouched: () => {};
-      
-      constructor() { }
-      
-      notifyValueChange() {
-        if (this.onChange) {
-          this.onChange(this.value);
-        }
-      }
-      
-      ngOnInit(): void {
-      
-      }
-      
-      writeValue(obj: any): void {
-        this.value = obj;
-      }
-      
-      registerOnChange(fn: any): void {
-        this.onChange = fn;
-      }
-      
-      registerOnTouched(fn: any): void {
-        this.onTouched = fn;
-      }
-      
-      setDisabledState(isDisabled: boolean): void {}
-    }
-    $0
-  ]]></content >
+	<content><![CDATA[
+		import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+		import { Component, Input, OnInit, forwardRef } from '@angular/core';
+		
+		export const ${1:COMPONENT_NAME}_VALUE_ACCESSOR: any = {
+			provide: NG_VALUE_ACCESSOR,
+			useExisting: forwardRef(() => ${2:ComponentName}Component),
+			multi: true
+		};
+		
+		@Component({
+			selector: '${3:selector-name}',
+			template: '${4}',
+			styles: ['${5}']
+			providers: [${1:COMPONENT_NAME}_VALUE_ACCESSOR]
+		})
+		export class ${2:ComponentName}Component implements OnInit, ControlValueAccessor {
+		
+			private _value: any;
+			
+			set value(value: any) {
+				this._value = value;
+				this.notifyValueChange();
+			}
+			
+			get value() {
+				return this._value;
+			}
+			
+			onChange: (value) => {};
+			onTouched: () => {};
+			
+			constructor() { }
+			
+			notifyValueChange() {
+				if (this.onChange) {
+					this.onChange(this.value);
+				}
+			}
+			
+			ngOnInit(): void {
+			
+			}
+			
+			writeValue(obj: any): void {
+				this.value = obj;
+			}
+			
+			registerOnChange(fn: any): void {
+				this.onChange = fn;
+			}
+			
+			registerOnTouched(fn: any): void {
+				this.onTouched = fn;
+			}
+			
+			setDisabledState(isDisabled: boolean): void {}
+		}
+		$0
+	]]></content >
 	<tabTrigger>ngComponentInlineForForm</tabTrigger>
 </snippet >
